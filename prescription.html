@@ -4,8 +4,8 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="web_standard" name="shell-type"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+
+
 
 
 <style>
@@ -26,8 +26,13 @@
 
 <title>اطلب روشتة | صيدلية زين</title>
 <meta name="description" content="صوّر روشتتك وأرسلها عبر واتساب، ويجهز الصيدلي أدويتك للاستلام أو التوصيل."/>
-<link href="assets/img/favicon.png" rel="icon" type="image/png"/><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link as="font" crossorigin="" href="assets/fonts/cairo-arabic.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="assets/fonts/cairo-latin.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="assets/fonts/material-symbols-subset.woff2" rel="preload" type="font/woff2"/>
+<link href="assets/fonts.css?v=20261123105133" rel="stylesheet"/>
+<link href="assets/img/favicon.png" rel="icon" type="image/png"/>
+<style>html.z-wait body{visibility:hidden}</style>
+<script>(function(){var d=document.documentElement;d.classList.add("z-wait");var done=function(){d.classList.remove("z-wait")};setTimeout(done,1500);window.addEventListener("DOMContentLoaded",function(){var f=document.fonts&&document.fonts.ready?document.fonts.ready:Promise.resolve();f.then(function(){requestAnimationFrame(function(){requestAnimationFrame(done)})})})})();</script>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script id="tailwind-config">
 tailwind.config = {
@@ -73,7 +78,7 @@ tailwind.config = {
   } }
 };
 </script>
-<link href="assets/site.css?v=20261123082439" rel="stylesheet"/>
+<link href="assets/site.css?v=20261123105133" rel="stylesheet"/>
 </head>
 <body class="bg-surface text-on-surface antialiased selection:bg-secondary/20 selection:text-secondary">
 <header class="sticky top-0 z-50 bg-surface/95 backdrop-blur-md border-b border-line" id="site-header">
@@ -425,5 +430,5 @@ tailwind.config = {
 </footer>
 <nav aria-label="تنقل سريع" class="md:hidden fixed bottom-0 inset-x-0 z-50 bg-white/95 backdrop-blur-md border-t border-line" style="padding-bottom: env(safe-area-inset-bottom)"><ul class="grid grid-cols-4"><li><a class="z-tab flex flex-col items-center gap-0.5 py-1.5 text-xs font-bold text-muted" href="index.html"><span class="z-tab__icon material-symbols-outlined text-[22px] px-4 py-0.5 rounded-full">home</span>الرئيسية</a></li><li><a class="z-tab flex flex-col items-center gap-0.5 py-1.5 text-xs font-bold text-muted" href="products.html"><span class="z-tab__icon material-symbols-outlined text-[22px] px-4 py-0.5 rounded-full">medication</span>المنتجات</a></li><li><a aria-current="page" class="z-tab flex flex-col items-center gap-0.5 py-1.5 text-xs font-bold text-primary" href="prescription.html"><span class="z-tab__icon material-symbols-outlined text-[22px] px-4 py-0.5 rounded-full">upload_file</span>اطلب روشتة</a></li><li><a class="z-tab flex flex-col items-center gap-0.5 py-1.5 text-xs font-bold text-muted" href="branches.html"><span class="z-tab__icon material-symbols-outlined text-[22px] px-4 py-0.5 rounded-full">location_on</span>الفروع</a></li></ul></nav>
 
-<script defer src="assets/site.js?v=20261123082439"></script>
+<script defer src="assets/site.js?v=20261123105133"></script>
 </body></html>
