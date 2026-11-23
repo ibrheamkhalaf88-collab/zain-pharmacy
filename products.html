@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="web_standard" name="shell-type"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+
+
+
+<style>
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Tajawal', 'Plus Jakarta Sans', sans-serif;
+        background-color: #fcf9f3;
+        color: #1c1c18;
+      }
+      body { overscroll-behavior: none; }
+    }
+    ::-webkit-scrollbar { display: none; }
+  </style>
+
+<title>الأدوية والمنتجات | صيدلية زين</title>
+<meta name="description" content="تصفح الأدوية والفيتامينات ومستلزمات الأم والطفل المتوفرة في فروع صيدلية زين بغزة."/>
+<link href="assets/img/favicon.png" rel="icon" type="image/png"/><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+tailwind.config = {
+  darkMode: "class",
+  theme: { extend: {
+    colors: {
+      "primary": "#1e5a84", "primary-container": "#174a6d", "primary-dark": "#133d5a", "primary-soft": "#e6f0f7",
+      "primary-fixed": "#cfe4f2", "primary-fixed-dim": "#a8cde6", "on-primary": "#ffffff", "on-primary-container": "#dbeaf5",
+      "on-primary-fixed": "#001d31", "on-primary-fixed-variant": "#1a4f74", "inverse-primary": "#a8cde6", "surface-tint": "#31709a",
+      "secondary": "#c2570c", "secondary-container": "#c2570c", "on-secondary": "#ffffff", "on-secondary-container": "#ffffff",
+      "secondary-fixed": "#ffdcc7", "secondary-fixed-dim": "#ffb787", "on-secondary-fixed": "#311300", "on-secondary-fixed-variant": "#723600",
+      "cta": "#c2570c", "cta-hover": "#a3480a", "cta-soft": "#fdf1e4",
+      "tertiary": "#432501", "tertiary-container": "#5d3b14", "tertiary-fixed": "#ffdcbd", "tertiary-fixed-dim": "#f0bd8b",
+      "on-tertiary": "#ffffff", "on-tertiary-container": "#d7a675", "on-tertiary-fixed": "#2c1600", "on-tertiary-fixed-variant": "#623f18",
+      "surface": "#fcf9f3", "background": "#fcf9f3", "surface-bright": "#fcf9f3", "surface-dim": "#dcdad4",
+      "surface-low": "#f6f3ed", "surface-card": "#ffffff", "surface-variant": "#e5e2dc",
+      "surface-container-lowest": "#ffffff", "surface-container-low": "#f6f3ed", "surface-container": "#f0eee8",
+      "surface-container-high": "#ebe8e2", "surface-container-highest": "#e5e2dc",
+      "on-surface": "#1c1c18", "on-background": "#1c1c18", "on-surface-variant": "#4f574b", "muted": "#687063",
+      "line": "#e6e2d8", "outline": "#727970", "outline-variant": "#c2c8be",
+      "inverse-surface": "#31312d", "inverse-on-surface": "#f3f0ea",
+      "error": "#ba1a1a", "on-error": "#ffffff", "error-container": "#ffdad6", "on-error-container": "#93000a"
+    },
+    fontFamily: {
+      sans: ["Cairo", "Tajawal", "sans-serif"],
+      "display": ["Cairo"], "display-mobile": ["Cairo"], "headline-lg": ["Cairo"], "headline-lg-mobile": ["Cairo"],
+      "headline-md": ["Cairo"], "headline-sm": ["Cairo"], "title-lg": ["Cairo"], "title-md": ["Cairo"],
+      "body-lg": ["Cairo"], "body-md": ["Cairo"], "body-sm": ["Cairo"], "label-lg": ["Cairo"], "label-md": ["Cairo"], "label-sm": ["Cairo"]
+    },
+    fontSize: {
+      "display": ["48px", {lineHeight: "60px", fontWeight: "800"}], "display-mobile": ["32px", {lineHeight: "44px", fontWeight: "800"}],
+      "headline-lg": ["32px", {lineHeight: "44px", fontWeight: "700"}], "headline-lg-mobile": ["24px", {lineHeight: "34px", fontWeight: "700"}],
+      "headline-md": ["24px", {lineHeight: "36px", fontWeight: "700"}], "headline-sm": ["20px", {lineHeight: "30px", fontWeight: "600"}],
+      "title-lg": ["18px", {lineHeight: "28px", fontWeight: "600"}], "title-md": ["16px", {lineHeight: "26px", fontWeight: "600"}],
+      "body-lg": ["18px", {lineHeight: "30px"}], "body-md": ["15px", {lineHeight: "26px"}], "body-sm": ["13px", {lineHeight: "22px"}],
+      "label-lg": ["14px", {lineHeight: "20px", fontWeight: "600"}], "label-md": ["12px", {lineHeight: "18px", fontWeight: "600"}],
+      "label-sm": ["11px", {lineHeight: "16px", fontWeight: "500"}]
+    },
+    spacing: {
+      "space-xs": "0.25rem", "space-sm": "0.5rem", "space-md": "1rem", "space-lg": "1.5rem", "space-xl": "2.5rem",
+      "margin": "1rem", "margin-tablet": "2rem", "margin-desktop": "3rem", "gutter": "1.25rem", "gutter-desktop": "1.75rem"
+    }
+  } }
+};
+</script>
+<link href="assets/site.css?v=20261123082439" rel="stylesheet"/>
+</head>
+<body class="bg-surface text-on-surface antialiased min-h-screen flex flex-col">
+<header class="sticky top-0 z-50 bg-surface/95 backdrop-blur-md border-b border-line" id="site-header">
+<div class="max-w-6xl mx-auto px-2 sm:px-6 h-14 md:h-16 flex items-center gap-1 md:gap-4">
+<a aria-label="صيدلية زين - الرئيسية" class="flex items-center gap-2 shrink-0 ps-1" href="index.html">
+<!-- logo mark cropped from the Instagram mockup; swap for the original flat file when available -->
+<img alt="" class="w-10 h-10 md:w-11 md:h-11 object-contain" height="44" src="assets/img/logo-mark-96.png" width="44"/>
+<span class="leading-none"><span class="block font-extrabold text-primary text-[17px] md:text-lg">صيدلية زين</span><span class="block text-[10px] md:text-[11px] font-bold tracking-[0.16em] text-muted mt-1" dir="ltr">ZAIN PHARMACY</span></span>
+</a>
+<nav aria-label="القائمة الرئيسية" class="hidden md:flex items-center gap-1 text-sm font-bold mx-auto">
+<a class="px-4 py-2 rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-low" href="index.html">الرئيسية</a>
+<a aria-current="page" class="px-4 py-2 rounded-full bg-primary-soft text-primary" href="products.html">المنتجات</a>
+<a class="px-4 py-2 rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-low" href="prescription.html">اطلب روشتة</a>
+<a class="px-4 py-2 rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-low" href="branches.html">الفروع</a>
+</nav>
+<div class="ms-auto md:ms-0 flex items-center gap-0.5">
+<a aria-label="اتصل بالصيدلية" class="md:hidden w-11 h-11 grid place-items-center rounded-full text-primary hover:bg-surface-low" href="tel:+97082820000"><span class="material-symbols-outlined">call</span></a>
+<a aria-label="ابحث عن دواء" class="w-11 h-11 grid place-items-center rounded-full text-primary hover:bg-surface-low" href="products.html#search"><span class="material-symbols-outlined">search</span></a>
+<button aria-label="سلة الطلب" class="relative w-11 h-11 grid place-items-center rounded-full text-primary hover:bg-surface-low" data-cart-open="" type="button">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="absolute top-1 left-1 min-w-[18px] h-[18px] px-1 rounded-full bg-cta text-white text-[10px] font-bold grid place-items-center hidden" data-cart-count="">0</span>
+</button>
+<a class="hidden md:inline-flex items-center gap-2 bg-cta hover:bg-cta-hover text-white font-bold text-sm rounded-full h-11 px-5 shadow-sm ms-2" href="https://wa.me/970599123456?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%B5%D9%8A%D8%AF%D9%84%D9%8A%D8%A9%20%D8%B2%D9%8A%D9%86" rel="noopener" target="_blank">
+<span class="material-symbols-outlined text-xl">chat</span>اطلب عبر واتساب</a>
+</div>
+</div>
+</header>
+
+<!-- Minimalist Top Navigation -->
+
+<!-- Main Content Container -->
+<main class="w-full pt-4 md:pt-8">
+<section class="max-w-6xl mx-auto px-3 sm:px-6">
+<h1 class="text-2xl md:text-3xl font-extrabold text-primary">المنتجات</h1>
+<p class="text-sm text-muted mt-1">ابحث عن دوائك وأضفه للسلة، ثم أرسل الطلب عبر واتساب.</p>
+<div class="sticky top-14 md:top-16 z-30 bg-surface/95 backdrop-blur-md -mx-3 px-3 pt-3 pb-2 mt-1">
+<label class="relative block" id="search"><span class="sr-only">ابحث عن منتج</span>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-muted pointer-events-none">search</span>
+<input autocomplete="off" class="w-full h-12 rounded-full bg-white border border-line pr-12 pl-4 text-[15px] placeholder:text-muted focus:border-primary focus:ring-2 focus:ring-primary/15" id="z-search" placeholder="ابحث باسم الدواء أو المادة الفعالة..." type="search"/>
+</label>
+<div class="flex gap-2 overflow-x-auto mt-2.5 pb-0.5" id="filterTabs"><button aria-pressed="true" class="z-chip shrink-0 h-10 px-4 rounded-full text-sm font-bold border bg-primary text-white border-primary" data-cat="all" type="button">الكل</button><button aria-pressed="false" class="z-chip shrink-0 h-10 px-4 rounded-full text-sm font-bold border bg-white text-on-surface border-line" data-cat="medicines" type="button">الأدوية</button><button aria-pressed="false" class="z-chip shrink-0 h-10 px-4 rounded-full text-sm font-bold border bg-white text-on-surface border-line" data-cat="mother-child" type="button">الأم والطفل</button><button aria-pressed="false" class="z-chip shrink-0 h-10 px-4 rounded-full text-sm font-bold border bg-white text-on-surface border-line" data-cat="skincare" type="button">العناية بالبشرة</button><button aria-pressed="false" class="z-chip shrink-0 h-10 px-4 rounded-full text-sm font-bold border bg-white text-on-surface border-line" data-cat="devices" type="button">أجهزة طبية</button></div>
+</div>
+<p aria-live="polite" class="text-xs text-muted mt-2" id="z-count"></p>
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2.5 md:gap-4 mt-2" id="productsGrid">
+<article class="product-item bg-white border border-line rounded-2xl p-2 md:p-3 flex flex-col" data-category="medicines" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuA-85m8mODkBvRLzIlxNH23dk6IsEQW9YZWBwB5neby5bsy-ZmBKfAnLjxKyyd2rTucmBgaazNWKR3709GMgsG4_BuZYcyVDLw8-ht584aRCvxha9S3dsnU1IKgLt7OZamkmBEwmVGgOkJM7ebzrDGRLoETgnbBeY_maC1IrqfxIbebCVRGVZDkUER0cHHHZDF11484cwVNhttcVKQu6KUWNhkh0sL1Q7IGmBX8f5Q" data-name="كونكور 5 ملغ" data-price="42" data-rx="">
+<div class="relative aspect-square rounded-xl overflow-hidden bg-surface-low"><img alt="كونكور 5 ملغ" class="w-full h-full object-cover" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-85m8mODkBvRLzIlxNH23dk6IsEQW9YZWBwB5neby5bsy-ZmBKfAnLjxKyyd2rTucmBgaazNWKR3709GMgsG4_BuZYcyVDLw8-ht584aRCvxha9S3dsnU1IKgLt7OZamkmBEwmVGgOkJM7ebzrDGRLoETgnbBeY_maC1IrqfxIbebCVRGVZDkUER0cHHHZDF11484cwVNhttcVKQu6KUWNhkh0sL1Q7IGmBX8f5Q"/><span class="absolute top-1.5 right-1.5 bg-primary/90 text-white text-[11px] font-bold px-1.5 py-0.5 rounded-md">يلزم وصفة</span></div>
+<p class="text-xs text-muted mt-2 truncate">أمراض مزمنة • ميرك</p>
+<h3 class="text-[14px] md:text-sm font-bold text-primary leading-snug line-clamp-2 min-h-[2.6em]">كونكور 5 ملغ</h3>
+<div class="mt-auto pt-1.5">
+<p class="font-extrabold text-cta text-[15px] md:text-lg"><span dir="ltr">42</span> ₪</p>
+<button class="mt-1.5 w-full h-9 rounded-full border border-primary/25 text-primary text-[13px] md:text-sm font-bold flex items-center justify-center gap-1 hover:bg-primary hover:text-white" data-add="" type="button"><span class="material-symbols-outlined text-[17px]">add_shopping_cart</span>أضف للسلة</button>
+</div>
+</article>
+<article class="product-item bg-white border border-line rounded-2xl p-2 md:p-3 flex flex-col" data-category="mother-child" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuDg8EwFW8ZMnbE3fCcKIIxFKCr5AfCry78St6iLyKZGkB8w3P_3haRnHaxjL76EfdX5wvUpQ6eBmdG5j63l112dZ0zwn5y3fhZZvAB8vfOANs5gJac8Wu5n9hj1qm4m7Rr97xfD1NqqAaA7kLtuPlB5CVtChPixxrZNEGqqDfWGzvwpCH7XNinUb3QzlIulG4NacOILRbbWCLpkarXUdV2L9Jujltq1itYaptGp5ew" data-name="حليب أبتاميل ادفانس 1" data-price="38.5">
+<div class="relative aspect-square rounded-xl overflow-hidden bg-surface-low"><img alt="حليب أبتاميل ادفانس 1" class="w-full h-full object-cover" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDg8EwFW8ZMnbE3fCcKIIxFKCr5AfCry78St6iLyKZGkB8w3P_3haRnHaxjL76EfdX5wvUpQ6eBmdG5j63l112dZ0zwn5y3fhZZvAB8vfOANs5gJac8Wu5n9hj1qm4m7Rr97xfD1NqqAaA7kLtuPlB5CVtChPixxrZNEGqqDfWGzvwpCH7XNinUb3QzlIulG4NacOILRbbWCLpkarXUdV2L9Jujltq1itYaptGp5ew"/></div>
+<p class="text-xs text-muted mt-2 truncate">صحة الطفل • نوتريشيا</p>
+<h3 class="text-[14px] md:text-sm font-bold text-primary leading-snug line-clamp-2 min-h-[2.6em]">حليب أبتاميل ادفانس 1</h3>
+<div class="mt-auto pt-1.5">
+<p class="font-extrabold text-cta text-[15px] md:text-lg"><span dir="ltr">38.5</span> ₪</p>
+<button class="mt-1.5 w-full h-9 rounded-full border border-primary/25 text-primary text-[13px] md:text-sm font-bold flex items-center justify-center gap-1 hover:bg-primary hover:text-white" data-add="" type="button"><span class="material-symbols-outlined text-[17px]">add_shopping_cart</span>أضف للسلة</button>
+</div>
+</article>
+<article class="product-item bg-white border border-line rounded-2xl p-2 md:p-3 flex flex-col" data-category="medicines" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuCdLzTJxWgrtRU8FDLdXmGdKNbusf7AnJ2TfMnT1kNMJICm2zCqMIc_ou7i1OHgIpH02hOVnmkqac0pBxjqHdrYFdd1uYxizxinWLAsVblDIJLBzJzGfZOjkNb12LM23uJBZMhWL6ZdYOTZ6enCNlFz2JLTn0FSlQ_bS9ykqHTAXmbMe1rwQuhXsdw4n8L04T08pCkTP-IPso9W3s-DqsaiF5tBgkOgQyj3hqvksF8" data-name="فيتامين د3 قطرات (5000 وحدة)" data-price="29">
+<div class="relative aspect-square rounded-xl overflow-hidden bg-surface-low"><img alt="فيتامين د3 قطرات (5000 وحدة)" class="w-full h-full object-cover" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdLzTJxWgrtRU8FDLdXmGdKNbusf7AnJ2TfMnT1kNMJICm2zCqMIc_ou7i1OHgIpH02hOVnmkqac0pBxjqHdrYFdd1uYxizxinWLAsVblDIJLBzJzGfZOjkNb12LM23uJBZMhWL6ZdYOTZ6enCNlFz2JLTn0FSlQ_bS9ykqHTAXmbMe1rwQuhXsdw4n8L04T08pCkTP-IPso9W3s-DqsaiF5tBgkOgQyj3hqvksF8"/></div>
+<p class="text-xs text-muted mt-2 truncate">فيتامينات • سويسرا</p>
+<h3 class="text-[14px] md:text-sm font-bold text-primary leading-snug line-clamp-2 min-h-[2.6em]">فيتامين د3 قطرات (5000 وحدة)</h3>
+<div class="mt-auto pt-1.5">
+<p class="font-extrabold text-cta text-[15px] md:text-lg"><span dir="ltr">29</span> ₪</p>
+<button class="mt-1.5 w-full h-9 rounded-full border border-primary/25 text-primary text-[13px] md:text-sm font-bold flex items-center justify-center gap-1 hover:bg-primary hover:text-white" data-add="" type="button"><span class="material-symbols-outlined text-[17px]">add_shopping_cart</span>أضف للسلة</button>
+</div>
+</article>
+<article class="product-item bg-white border border-line rounded-2xl p-2 md:p-3 flex flex-col" data-category="devices" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuCAjnUIqBX3Y2iOtQL6ej8U7Y-O1pHM6VI2sBTWE3CaLkVjalEKE8MeywaYhYx8dCMecCvLwPSo9nNen-PoefH8n8S2P0mjcwO7VEMTPX0X_ebRbIp-mEDNtq1ngIUr9_-DfEOnuYx9DAA-Y6R9-7D_GZN0TZIfFgCiV6jVhVVnU9UNIP-ZPYCEZAsIPTI_-QOZCCOD4Irx-vT8HEpMqCnpgTNkEbxj-zfd1okDtnU" data-name="جهاز قياس الضغط M2" data-price="145">
+<div class="relative aspect-square rounded-xl overflow-hidden bg-surface-low"><img alt="جهاز قياس الضغط M2" class="w-full h-full object-cover" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAjnUIqBX3Y2iOtQL6ej8U7Y-O1pHM6VI2sBTWE3CaLkVjalEKE8MeywaYhYx8dCMecCvLwPSo9nNen-PoefH8n8S2P0mjcwO7VEMTPX0X_ebRbIp-mEDNtq1ngIUr9_-DfEOnuYx9DAA-Y6R9-7D_GZN0TZIfFgCiV6jVhVVnU9UNIP-ZPYCEZAsIPTI_-QOZCCOD4Irx-vT8HEpMqCnpgTNkEbxj-zfd1okDtnU"/></div>
+<p class="text-xs text-muted mt-2 truncate">أجهزة طبية • أومرون اليابان</p>
+<h3 class="text-[14px] md:text-sm font-bold text-primary leading-snug line-clamp-2 min-h-[2.6em]">جهاز قياس الضغط M2</h3>
+<div class="mt-auto pt-1.5">
+<p class="font-extrabold text-cta text-[15px] md:text-lg"><span dir="ltr">145</span> ₪</p>
+<button class="mt-1.5 w-full h-9 rounded-full border border-primary/25 text-primary text-[13px] md:text-sm font-bold flex items-center justify-center gap-1 hover:bg-primary hover:text-white" data-add="" type="button"><span class="material-symbols-outlined text-[17px]">add_shopping_cart</span>أضف للسلة</button>
+</div>
+</article>
+<article class="product-item bg-white border border-line rounded-2xl p-2 md:p-3 flex flex-col" data-category="skincare" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuCf2MljJqliAkj4Vr8PCqnHWKnEK8_XR0Z20kv0jTLBKQB0ycr272U0QTRmW0VXQTMAc5ERm_axQ6LLM_PohJdQS7gbbL7S4dlGbO51kuRXFwg0XmHeHmjGDNEPiBQpDq4wxp-xZ-1x6eECsRPXDqX26uUlGfwX_-cO8_TQTcX19MUKiwOShoHf3UZrUL80OKhMmn1uql0v3e8mqkei4Qct_-uLGIXZgsb8Ymh8hTg" data-name="واقي شمس أنتيليوس +50" data-price="65">
+<div class="relative aspect-square rounded-xl overflow-hidden bg-surface-low"><img alt="واقي شمس أنتيليوس +50" class="w-full h-full object-cover" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCf2MljJqliAkj4Vr8PCqnHWKnEK8_XR0Z20kv0jTLBKQB0ycr272U0QTRmW0VXQTMAc5ERm_axQ6LLM_PohJdQS7gbbL7S4dlGbO51kuRXFwg0XmHeHmjGDNEPiBQpDq4wxp-xZ-1x6eECsRPXDqX26uUlGfwX_-cO8_TQTcX19MUKiwOShoHf3UZrUL80OKhMmn1uql0v3e8mqkei4Qct_-uLGIXZgsb8Ymh8hTg"/></div>
+<p class="text-xs text-muted mt-2 truncate">عناية بالبشرة • لاروش بوزيه</p>
+<h3 class="text-[14px] md:text-sm font-bold text-primary leading-snug line-clamp-2 min-h-[2.6em]">واقي شمس أنتيليوس +50</h3>
+<div class="mt-auto pt-1.5">
+<p class="font-extrabold text-cta text-[15px] md:text-lg"><span dir="ltr">65</span> ₪</p>
+<button class="mt-1.5 w-full h-9 rounded-full border border-primary/25 text-primary text-[13px] md:text-sm font-bold flex items-center justify-center gap-1 hover:bg-primary hover:text-white" data-add="" type="button"><span class="material-symbols-outlined text-[17px]">add_shopping_cart</span>أضف للسلة</button>
+</div>
+</article>
+<article class="product-item bg-white border border-line rounded-2xl p-2 md:p-3 flex flex-col" data-category="mother-child" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuCPF9Xht_5gpfLXw_FVCGBPpm74rSgu2oGzoqB7oW_lMiN4W-PbRokQ14d5iiWpkyRas0uiSc8CGHsR-kKR6_uPvrUKlMCiol1auW9E_irSuPJQzTxQdkgioQv71z5xoVnsX1HUr_pJqcGz8VwpqtVpI_Ok78vtw0Faw-GRAz3CtKlaEyarudwfg5AH-y21w3j7eMiqFQsvPzQ1qXZnuZ3n2GpUBuYL7T6Sq_3i8tM" data-name="شامبو أطفال خالٍ من الدموع" data-price="22">
+<div class="relative aspect-square rounded-xl overflow-hidden bg-surface-low"><img alt="شامبو أطفال خالٍ من الدموع" class="w-full h-full object-cover" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPF9Xht_5gpfLXw_FVCGBPpm74rSgu2oGzoqB7oW_lMiN4W-PbRokQ14d5iiWpkyRas0uiSc8CGHsR-kKR6_uPvrUKlMCiol1auW9E_irSuPJQzTxQdkgioQv71z5xoVnsX1HUr_pJqcGz8VwpqtVpI_Ok78vtw0Faw-GRAz3CtKlaEyarudwfg5AH-y21w3j7eMiqFQsvPzQ1qXZnuZ3n2GpUBuYL7T6Sq_3i8tM"/></div>
+<p class="text-xs text-muted mt-2 truncate">صحة الطفل • سيباميد ألمانيا</p>
+<h3 class="text-[14px] md:text-sm font-bold text-primary leading-snug line-clamp-2 min-h-[2.6em]">شامبو أطفال خالٍ من الدموع</h3>
+<div class="mt-auto pt-1.5">
+<p class="font-extrabold text-cta text-[15px] md:text-lg"><span dir="ltr">22</span> ₪</p>
+<button class="mt-1.5 w-full h-9 rounded-full border border-primary/25 text-primary text-[13px] md:text-sm font-bold flex items-center justify-center gap-1 hover:bg-primary hover:text-white" data-add="" type="button"><span class="material-symbols-outlined text-[17px]">add_shopping_cart</span>أضف للسلة</button>
+</div>
+</article>
+<article class="product-item bg-white border border-line rounded-2xl p-2 md:p-3 flex flex-col" data-category="devices" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuBmKpipugGoKXfIR5I8q87QWPLkJqX-0lQRYbGYCzGheVhU5KcOfTBYapSE2smZwdPXPGqTHQ6IMC4GKlKBYcF8x3KT0BnctNBAnbYFzRyqH7pHKwHbnr9UXOBGtZlB9VVrbbwtgmIxQ7DuayVLS6WWNckb-wlHxd9fgpe7TIx8hh27EjaF91fn8tjXZ0UZuwHkl5ndJFfUPIOy8yKVD1Ywg2_9e__ymg30tPt7MrU" data-name="شرائط أكيو-تشيك انستانت" data-price="55">
+<div class="relative aspect-square rounded-xl overflow-hidden bg-surface-low"><img alt="شرائط أكيو-تشيك انستانت" class="w-full h-full object-cover" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmKpipugGoKXfIR5I8q87QWPLkJqX-0lQRYbGYCzGheVhU5KcOfTBYapSE2smZwdPXPGqTHQ6IMC4GKlKBYcF8x3KT0BnctNBAnbYFzRyqH7pHKwHbnr9UXOBGtZlB9VVrbbwtgmIxQ7DuayVLS6WWNckb-wlHxd9fgpe7TIx8hh27EjaF91fn8tjXZ0UZuwHkl5ndJFfUPIOy8yKVD1Ywg2_9e__ymg30tPt7MrU"/></div>
+<p class="text-xs text-muted mt-2 truncate">سكري • روش السويسرية</p>
+<h3 class="text-[14px] md:text-sm font-bold text-primary leading-snug line-clamp-2 min-h-[2.6em]">شرائط أكيو-تشيك انستانت</h3>
+<div class="mt-auto pt-1.5">
+<p class="font-extrabold text-cta text-[15px] md:text-lg"><span dir="ltr">55</span> ₪</p>
+<button class="mt-1.5 w-full h-9 rounded-full border border-primary/25 text-primary text-[13px] md:text-sm font-bold flex items-center justify-center gap-1 hover:bg-primary hover:text-white" data-add="" type="button"><span class="material-symbols-outlined text-[17px]">add_shopping_cart</span>أضف للسلة</button>
+</div>
+</article>
+<article class="product-item bg-white border border-line rounded-2xl p-2 md:p-3 flex flex-col" data-category="medicines" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuC3vMW9819WQ-vwqF0Ka5I6OVE-9OM_Scz71vM2GeTV1YqFGMeG0ofGdMizN-REVdUg-ftN82yfB8iR78DRWHjwOo9p2HNTNUGnVJwVbd3pMvbiwwi0UEQjvXeACQ2xe5BmQHhmXV37lvAaZBw6BuX6j6hoKF_Cvyrqy9YFH02LjSYia6HzrthPnPowPh1ivnPhmkkwDNPNWNbcBhM61hdD7WODKeWj9LyZUgI-lOY" data-name="بانادول أدفانس 500 ملغ" data-price="12">
+<div class="relative aspect-square rounded-xl overflow-hidden bg-surface-low"><img alt="بانادول أدفانس 500 ملغ" class="w-full h-full object-cover" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3vMW9819WQ-vwqF0Ka5I6OVE-9OM_Scz71vM2GeTV1YqFGMeG0ofGdMizN-REVdUg-ftN82yfB8iR78DRWHjwOo9p2HNTNUGnVJwVbd3pMvbiwwi0UEQjvXeACQ2xe5BmQHhmXV37lvAaZBw6BuX6j6hoKF_Cvyrqy9YFH02LjSYia6HzrthPnPowPh1ivnPhmkkwDNPNWNbcBhM61hdD7WODKeWj9LyZUgI-lOY"/></div>
+<p class="text-xs text-muted mt-2 truncate">مسكنات • GSK</p>
+<h3 class="text-[14px] md:text-sm font-bold text-primary leading-snug line-clamp-2 min-h-[2.6em]">بانادول أدفانس 500 ملغ</h3>
+<div class="mt-auto pt-1.5">
+<p class="font-extrabold text-cta text-[15px] md:text-lg"><span dir="ltr">12</span> ₪</p>
+<button class="mt-1.5 w-full h-9 rounded-full border border-primary/25 text-primary text-[13px] md:text-sm font-bold flex items-center justify-center gap-1 hover:bg-primary hover:text-white" data-add="" type="button"><span class="material-symbols-outlined text-[17px]">add_shopping_cart</span>أضف للسلة</button>
+</div>
+</article>
+</div>
+<div class="hidden text-center py-12" id="z-empty">
+<span class="material-symbols-outlined text-5xl text-outline-variant">search_off</span>
+<p class="font-bold text-primary mt-2">ما لقينا هذا المنتج</p>
+<p class="text-sm text-muted mt-1">ابعتلنا اسمه على واتساب ونتأكد لك من توفره في الفروع.</p>
+<a class="inline-flex items-center gap-2 mt-4 h-11 px-6 rounded-full bg-cta hover:bg-cta-hover text-white font-bold" href="https://wa.me/970599123456?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%B5%D9%8A%D8%AF%D9%84%D9%8A%D8%A9%20%D8%B2%D9%8A%D9%86" rel="noopener" target="_blank"><span class="material-symbols-outlined">chat</span>اسأل عبر واتساب</a>
+</div>
+</section>
+<section class="max-w-6xl mx-auto px-3 sm:px-6 mt-8">
+<a class="flex items-center gap-3 bg-primary text-white rounded-2xl p-4 md:p-6" href="prescription.html">
+<span class="w-12 h-12 rounded-full bg-white/15 grid place-items-center shrink-0"><span class="material-symbols-outlined">upload_file</span></span>
+<span class="flex-1"><span class="block font-extrabold md:text-lg">ما لقيت دواءك أو عندك روشتة؟</span><span class="block text-[13px] md:text-sm text-white/80 mt-0.5">صوّرها وأرسلها، والصيدلي يجهز طلبك</span></span>
+<span class="material-symbols-outlined">chevron_left</span>
+</a>
+</section>
+</main>
+<!-- Clean Minimal Unified Footer -->
+<footer class="bg-white border-t border-line mt-16">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4 text-sm">
+<div class="space-y-3">
+<div class="flex items-center gap-2.5">
+<img alt="" class="w-10 h-10 object-contain" height="40" loading="lazy" src="assets/img/logo-mark-96.png" width="40"/>
+<span class="font-extrabold text-primary text-lg">صيدلية زين - غزة</span>
+</div>
+<p class="text-on-surface-variant leading-relaxed">أدوية أصلية، صيادلة مرخّصون، وتوصيل من أقرب فرع من فروعنا الأربعة في قطاع غزة.</p>
+<p class="inline-flex items-center gap-1.5 text-primary font-bold"><span class="material-symbols-outlined text-lg">verified_user</span>مرخّصة من وزارة الصحة الفلسطينية</p>
+</div>
+<div>
+<h3 class="font-extrabold text-primary mb-3">روابط سريعة</h3>
+<ul class="space-y-2 text-on-surface-variant">
+<li><a class="hover:text-primary" href="products.html">الأدوية والمنتجات</a></li>
+<li><a class="hover:text-primary" href="prescription.html">اطلب روشتة</a></li>
+<li><a class="hover:text-primary" href="branches.html">فروعنا وساعات العمل</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-extrabold text-primary mb-3">فروعنا</h3>
+<!-- TODO: confirm official branch names -->
+<ul class="space-y-2 text-on-surface-variant">
+<li><a class="hover:text-primary" href="branches.html">فرع الرمال (24 ساعة)</a></li>
+<li><a class="hover:text-primary" href="branches.html">فرع تل الهوا</a></li>
+<li><a class="hover:text-primary" href="branches.html">فرع النصر</a></li>
+<li><a class="hover:text-primary" href="branches.html">فرع دير البلح</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-extrabold text-primary mb-3">تواصل معنا</h3>
+<!-- TODO: confirm emergency and WhatsApp numbers -->
+<div class="space-y-2">
+<a class="flex items-center gap-2 text-on-surface hover:text-primary font-bold" dir="ltr" href="tel:+97082820000"><span class="material-symbols-outlined text-lg text-primary">call</span>+970 8 282 0000</a>
+<a class="flex items-center gap-2 text-cta hover:text-cta-hover font-bold" dir="ltr" href="https://wa.me/970599123456" rel="noopener" target="_blank"><span class="material-symbols-outlined text-lg">chat</span>+970 59 912 3456</a>
+<p class="text-muted text-xs">الدفع نقدًا عند الاستلام · جوال باي · بال باي</p>
+</div>
+</div>
+</div>
+<div class="border-t border-line">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 text-xs text-muted">© 2026 صيدلية زين - غزة. جميع الحقوق محفوظة.</div>
+</div>
+</footer>
+<nav aria-label="تنقل سريع" class="md:hidden fixed bottom-0 inset-x-0 z-50 bg-white/95 backdrop-blur-md border-t border-line" style="padding-bottom: env(safe-area-inset-bottom)"><ul class="grid grid-cols-4"><li><a class="z-tab flex flex-col items-center gap-0.5 py-1.5 text-xs font-bold text-muted" href="index.html"><span class="z-tab__icon material-symbols-outlined text-[22px] px-4 py-0.5 rounded-full">home</span>الرئيسية</a></li><li><a aria-current="page" class="z-tab flex flex-col items-center gap-0.5 py-1.5 text-xs font-bold text-primary" href="products.html"><span class="z-tab__icon material-symbols-outlined text-[22px] px-4 py-0.5 rounded-full">medication</span>المنتجات</a></li><li><a class="z-tab flex flex-col items-center gap-0.5 py-1.5 text-xs font-bold text-muted" href="prescription.html"><span class="z-tab__icon material-symbols-outlined text-[22px] px-4 py-0.5 rounded-full">upload_file</span>اطلب روشتة</a></li><li><a class="z-tab flex flex-col items-center gap-0.5 py-1.5 text-xs font-bold text-muted" href="branches.html"><span class="z-tab__icon material-symbols-outlined text-[22px] px-4 py-0.5 rounded-full">location_on</span>الفروع</a></li></ul></nav>
+
+<!-- Toast Notification for Adding items -->
+<div class="fixed bottom-6 left-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none" id="quickToast">
+<div class="bg-primary text-white text-xs font-bold px-4 py-3 rounded-xl shadow-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-emerald-400 text-lg">check_circle</span>
+<span id="toastMessage">تمت الإضافة بنجاح</span>
+</div>
+</div>
+<!-- Interactive Search and Filtering Logic -->
+
+<script defer src="assets/site.js?v=20261123082439"></script>
+</body></html>

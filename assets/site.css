@@ -1,0 +1,127 @@
+/* ============================================================
+   Zain Pharmacy - shared design system layer
+   Applies to every page (with the shared Tailwind config).
+   1 Mobile-first   2 Hierarchy   3 Low cognitive load
+   4 Conversion     5 Micro-interactions   6 Consistency
+   ============================================================ */
+
+:root {
+  --z-primary: #1e5a84;
+  --z-primary-soft: #e6f0f7;
+  --z-cta: #c2570c;
+  --z-cta-hover: #a3480a;
+  --z-surface: #fcf9f3;
+  --z-line: #e6e2d8;
+  --z-ease: cubic-bezier(.2, .7, .2, 1);
+}
+
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  font-family: "Cairo", "Tajawal", system-ui, sans-serif !important;
+  background: var(--z-surface);
+  overflow-x: clip;
+}
+/* One Arabic typeface everywhere (Stitch pages mixed Cairo / Tajawal / Jakarta) */
+h1, h2, h3, h4, p, span, a, button, input, select, textarea, label, li {
+  font-family: inherit;
+}
+img { max-width: 100%; }
+
+/* ---------- 1. Mobile-first ---------- */
+@media (max-width: 767px) {
+  body { padding-bottom: calc(68px + env(safe-area-inset-bottom)); }
+  /* 16px inputs stop iOS from zooming in on focus */
+  input, select, textarea { font-size: 16px !important; }
+  /* comfortable tap targets */
+  main a.rounded-full, main a.rounded-xl, main button:not([data-add]) { min-height: 44px; }
+}
+
+/* ---------- 5. Micro-interactions ---------- */
+a, button, .product-item, .branch-card, [class*="rounded-2xl"] {
+  transition: transform .18s var(--z-ease), box-shadow .25s var(--z-ease),
+              background-color .2s ease, color .2s ease, border-color .2s ease, opacity .2s ease;
+}
+a:active, button:active { transform: scale(.97); }
+.product-item:hover, .branch-card:hover { transform: translateY(-3px); box-shadow: 0 12px 28px -10px rgba(30, 90, 132, .18); }
+:focus-visible { outline: 3px solid rgba(194, 87, 12, .45); outline-offset: 2px; border-radius: 10px; }
+
+/* Page enters softly */
+@keyframes z-page-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+main { animation: z-page-in .4s var(--z-ease) both; }
+
+/* Sections reveal on scroll (class added by site.js, so no-JS still shows everything) */
+.z-reveal { opacity: 0; transform: translateY(18px); transition: opacity .55s var(--z-ease), transform .55s var(--z-ease); }
+.z-reveal.is-visible { opacity: 1; transform: none; }
+
+/* Bottom nav active pill */
+.z-tab[aria-current="page"] .z-tab__icon { background: var(--z-primary-soft); color: var(--z-primary); }
+.z-tab__icon { transition: background-color .2s ease, color .2s ease; }
+
+/* Hero CTA gentle attention pulse (once, not looping) */
+@keyframes z-nudge { 0%, 100% { transform: none; } 50% { transform: translateY(-2px); } }
+.z-cta-nudge { animation: z-nudge .9s var(--z-ease) .8s 2; }
+
+/* WhatsApp toast */
+.z-toast {
+  position: fixed; inset-inline: 16px; bottom: calc(84px + env(safe-area-inset-bottom)); z-index: 60;
+  max-width: 420px; margin-inline: auto; background: var(--z-primary); color: #fff;
+  padding: 12px 16px; border-radius: 14px; font-weight: 700; font-size: 14px; text-align: center;
+  box-shadow: 0 16px 32px -12px rgba(19, 61, 90, .35);
+  opacity: 0; transform: translateY(12px); pointer-events: none;
+  transition: opacity .25s ease, transform .25s var(--z-ease);
+}
+.z-toast.is-on { opacity: 1; transform: none; }
+@media (min-width: 768px) { .z-toast { bottom: 24px; } }
+
+
+/* ---------- Mobile fixes for Stitch markup ---------- */
+main [dir="ltr"] { white-space: nowrap; unicode-bidi: isolate; }   /* phone numbers never break */
+.branch-card .text-sm.flex.items-center { flex-wrap: wrap; row-gap: .25rem; }
+.branch-card a span, .branch-card button span { white-space: nowrap; }
+@media (max-width: 767px) {
+  /* filter chips scroll sideways instead of stacking (less visual noise) */
+  #filterContainer, #filterTabs { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; padding-bottom: 2px; }
+  #filterContainer::-webkit-scrollbar, #filterTabs::-webkit-scrollbar { display: none; }
+  #filterContainer > *, #filterTabs > * { flex-shrink: 0; }
+}
+@media (max-width: 639px) {
+  /* two products per row: faster scanning on phones */
+  .product-item { padding: .625rem; border-radius: 1rem; }
+  .product-item h3 { font-size: .92rem; }
+  .product-item > div:last-child { flex-direction: column; align-items: stretch; gap: .5rem; padding-top: .6rem; margin-top: .5rem; }
+  .product-item > div:last-child button { justify-content: center; }
+}
+
+
+/* ---------- Drawers: menu (right) and cart (left) ---------- */
+.z-overlay { opacity: 0; transition: opacity .25s ease; }
+.z-panel { transition: transform .3s var(--z-ease); }
+.z-panel--right { transform: translateX(100%); }
+.z-panel--left { transform: translateX(-100%); }
+.is-open .z-overlay { opacity: 1; }
+.is-open .z-panel { transform: none; }
+
+/* Horizontal product row: no visible scrollbar */
+.z-scroller { scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+.z-scroller::-webkit-scrollbar { display: none; }
+
+/* Cart badge bump when an item is added */
+@keyframes z-bump { 0% { transform: scale(1); } 40% { transform: scale(1.4); } 100% { transform: scale(1); } }
+.z-bump { animation: z-bump .45s var(--z-ease); }
+
+
+/* ---------- Offers: red corner ribbon, stock bar, countdown ---------- */
+.z-ribbon {
+  position: absolute; top: 14px; left: -34px; z-index: 5; width: 130px; transform: rotate(-45deg);
+  background: #d92d20; color: #fff; text-align: center; font-size: 11px; font-weight: 800; line-height: 22px;
+  box-shadow: 0 2px 6px rgba(217, 45, 32, .35);
+}
+@keyframes z-stock-in { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+.z-stock { transform-origin: right; animation: z-stock-in 1s var(--z-ease) .3s both; }
+@keyframes z-tick { 0%, 100% { opacity: 1; } 50% { opacity: .75; } }
+.z-countdown .material-symbols-outlined { animation: z-tick 1s steps(1) infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  .z-reveal { opacity: 1; transform: none; }
+}
