@@ -272,6 +272,38 @@
     }
   };
 
+  // ---------------- Prescription page: pickup/delivery switch, file name, validation ----------------
+  var rxForm = document.getElementById('prescriptionForm');
+  if (rxForm) {
+    var addrBox = document.getElementById('addressInputBox'), branchBox = document.getElementById('branchSelectorBox');
+    var errEl = document.getElementById('formError');
+    rxForm.addEventListener('change', function (ev) {
+      if (ev.target.name === 'fulfillment') {
+        var del = ev.target.value === 'delivery';
+        addrBox.classList.toggle('hidden', !del); branchBox.classList.toggle('hidden', del);
+      }
+      if (ev.target.id === 'prescriptionFile') {
+        var f = ev.target.files && ev.target.files[0];
+        document.getElementById('fileNameDisplay').textContent = f ? '✓ ' + f.name : 'اضغط لتصوير الروشتة أو اختيار صورة';
+      }
+    });
+    rxForm.addEventListener('submit', function (ev) {
+      ev.preventDefault();
+      var val = function (id) { return (document.getElementById(id).value || '').trim(); };
+      var mode = (rxForm.querySelector('input[name="fulfillment"]:checked') || {}).value;
+      var problem = !val('patientName') ? ['patientName', 'اكتب اسم المريض'] :
+        val('patientPhone').replace(/\D/g, '').length < 9 ? ['patientPhone', 'اكتب رقم جوال صحيح'] :
+        (mode === 'delivery' && !val('deliveryAddress')) ? ['deliveryAddress', 'اكتب عنوان التوصيل'] : null;
+      if (problem) {
+        errEl.textContent = problem[1]; errEl.classList.remove('hidden');
+        document.getElementById(problem[0]).focus();
+        return;
+      }
+      errEl.classList.add('hidden');
+      window.handleSubmitPrescription();
+    });
+  }
+
   // ---------------- Reveal sections as they enter the screen ----------------
   if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
     var io = new IntersectionObserver(function (entries) {

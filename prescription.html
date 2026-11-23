@@ -1,90 +1,51 @@
 <!DOCTYPE html>
-
-<html dir="rtl" lang="ar"><head>
+<html dir="rtl" lang="ar">
+<head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="web_standard" name="shell-type"/>
-
-
-
-
-<style>
-    @layer base {
-      html, body {
-        margin: 0;
-        padding: 0;
-        font-family: 'Tajawal', 'Plus Jakarta Sans', sans-serif;
-        background-color: #fcf9f3;
-      }
-      body { overscroll-behavior: none; }
-      main > :first-child { margin-top: 0 !important; }
-      main > :last-child { margin-bottom: 0 !important; }
-    }
-    ::-webkit-scrollbar { display: none; }
-  </style>
-
-
-<title>اطلب روشتة | صيدلية زين</title>
-<meta name="description" content="صوّر روشتتك وأرسلها عبر واتساب، ويجهز الصيدلي أدويتك للاستلام أو التوصيل."/>
+<title>اطلب روشتة عبر واتساب | صيدلية زين غزة</title>
+<meta content="صوّر روشتتك وأرسلها لـصيدلية زين عبر واتساب، ويجهز الصيدلي أدويتك للاستلام من أقرب فرع أو التوصيل للبيت." name="description"/>
+<link href="https://ibrheamkhalaf88-collab.github.io/zain-pharmacy/prescription.html" rel="canonical"/>
+<meta content="#1e5a84" name="theme-color"/>
+<meta content="website" property="og:type"/>
+<meta content="صيدلية زين" property="og:site_name"/>
+<meta content="ar_PS" property="og:locale"/>
+<meta content="اطلب روشتة عبر واتساب | صيدلية زين غزة" property="og:title"/>
+<meta content="صوّر روشتتك وأرسلها لـصيدلية زين عبر واتساب، ويجهز الصيدلي أدويتك للاستلام من أقرب فرع أو التوصيل للبيت." property="og:description"/>
+<meta content="https://ibrheamkhalaf88-collab.github.io/zain-pharmacy/prescription.html" property="og:url"/>
+<meta content="https://ibrheamkhalaf88-collab.github.io/zain-pharmacy/assets/img/og.jpg" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
 <link as="font" crossorigin="" href="assets/fonts/cairo-arabic.woff2" rel="preload" type="font/woff2"/>
 <link as="font" crossorigin="" href="assets/fonts/cairo-latin.woff2" rel="preload" type="font/woff2"/>
-<link as="font" crossorigin="" href="assets/fonts/material-symbols-subset.woff2" rel="preload" type="font/woff2"/>
-<link href="assets/fonts.css?v=20261123105133" rel="stylesheet"/>
+<link as="font" crossorigin="" href="assets/fonts/material-symbols-subset.woff2?v=b5c4ecdf" rel="preload" type="font/woff2"/>
+<link href="assets/fonts.css?v=20261123121202" rel="stylesheet"/>
 <link href="assets/img/favicon.png" rel="icon" type="image/png"/>
+<link href="assets/img/logo-mark.png" rel="apple-touch-icon"/>
 <style>html.z-wait body{visibility:hidden}</style>
 <script>(function(){var d=document.documentElement;d.classList.add("z-wait");var done=function(){d.classList.remove("z-wait")};setTimeout(done,1500);window.addEventListener("DOMContentLoaded",function(){var f=document.fonts&&document.fonts.ready?document.fonts.ready:Promise.resolve();f.then(function(){requestAnimationFrame(function(){requestAnimationFrame(done)})})})})();</script>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-tailwind.config = {
-  darkMode: "class",
-  theme: { extend: {
-    colors: {
-      "primary": "#1e5a84", "primary-container": "#174a6d", "primary-dark": "#133d5a", "primary-soft": "#e6f0f7",
-      "primary-fixed": "#cfe4f2", "primary-fixed-dim": "#a8cde6", "on-primary": "#ffffff", "on-primary-container": "#dbeaf5",
-      "on-primary-fixed": "#001d31", "on-primary-fixed-variant": "#1a4f74", "inverse-primary": "#a8cde6", "surface-tint": "#31709a",
-      "secondary": "#c2570c", "secondary-container": "#c2570c", "on-secondary": "#ffffff", "on-secondary-container": "#ffffff",
-      "secondary-fixed": "#ffdcc7", "secondary-fixed-dim": "#ffb787", "on-secondary-fixed": "#311300", "on-secondary-fixed-variant": "#723600",
-      "cta": "#c2570c", "cta-hover": "#a3480a", "cta-soft": "#fdf1e4",
-      "tertiary": "#432501", "tertiary-container": "#5d3b14", "tertiary-fixed": "#ffdcbd", "tertiary-fixed-dim": "#f0bd8b",
-      "on-tertiary": "#ffffff", "on-tertiary-container": "#d7a675", "on-tertiary-fixed": "#2c1600", "on-tertiary-fixed-variant": "#623f18",
-      "surface": "#fcf9f3", "background": "#fcf9f3", "surface-bright": "#fcf9f3", "surface-dim": "#dcdad4",
-      "surface-low": "#f6f3ed", "surface-card": "#ffffff", "surface-variant": "#e5e2dc",
-      "surface-container-lowest": "#ffffff", "surface-container-low": "#f6f3ed", "surface-container": "#f0eee8",
-      "surface-container-high": "#ebe8e2", "surface-container-highest": "#e5e2dc",
-      "on-surface": "#1c1c18", "on-background": "#1c1c18", "on-surface-variant": "#4f574b", "muted": "#687063",
-      "line": "#e6e2d8", "outline": "#727970", "outline-variant": "#c2c8be",
-      "inverse-surface": "#31312d", "inverse-on-surface": "#f3f0ea",
-      "error": "#ba1a1a", "on-error": "#ffffff", "error-container": "#ffdad6", "on-error-container": "#93000a"
-    },
-    fontFamily: {
-      sans: ["Cairo", "Tajawal", "sans-serif"],
-      "display": ["Cairo"], "display-mobile": ["Cairo"], "headline-lg": ["Cairo"], "headline-lg-mobile": ["Cairo"],
-      "headline-md": ["Cairo"], "headline-sm": ["Cairo"], "title-lg": ["Cairo"], "title-md": ["Cairo"],
-      "body-lg": ["Cairo"], "body-md": ["Cairo"], "body-sm": ["Cairo"], "label-lg": ["Cairo"], "label-md": ["Cairo"], "label-sm": ["Cairo"]
-    },
-    fontSize: {
-      "display": ["48px", {lineHeight: "60px", fontWeight: "800"}], "display-mobile": ["32px", {lineHeight: "44px", fontWeight: "800"}],
-      "headline-lg": ["32px", {lineHeight: "44px", fontWeight: "700"}], "headline-lg-mobile": ["24px", {lineHeight: "34px", fontWeight: "700"}],
-      "headline-md": ["24px", {lineHeight: "36px", fontWeight: "700"}], "headline-sm": ["20px", {lineHeight: "30px", fontWeight: "600"}],
-      "title-lg": ["18px", {lineHeight: "28px", fontWeight: "600"}], "title-md": ["16px", {lineHeight: "26px", fontWeight: "600"}],
-      "body-lg": ["18px", {lineHeight: "30px"}], "body-md": ["15px", {lineHeight: "26px"}], "body-sm": ["13px", {lineHeight: "22px"}],
-      "label-lg": ["14px", {lineHeight: "20px", fontWeight: "600"}], "label-md": ["12px", {lineHeight: "18px", fontWeight: "600"}],
-      "label-sm": ["11px", {lineHeight: "16px", fontWeight: "500"}]
-    },
-    spacing: {
-      "space-xs": "0.25rem", "space-sm": "0.5rem", "space-md": "1rem", "space-lg": "1.5rem", "space-xl": "2.5rem",
-      "margin": "1rem", "margin-tablet": "2rem", "margin-desktop": "3rem", "gutter": "1.25rem", "gutter-desktop": "1.75rem"
-    }
-  } }
-};
+<script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+<script>
+tailwind.config = { theme: { extend: {
+  colors: {
+    "primary": "#1e5a84", "primary-dark": "#133d5a", "primary-soft": "#e6f0f7",
+    "cta": "#c2570c", "cta-hover": "#a3480a", "cta-soft": "#fdf1e4",
+    "surface": "#fcf9f3", "surface-low": "#f6f3ed", "surface-container": "#f0eee8", "sand": "#f3ece1",
+    "on-surface": "#1c1c18", "on-surface-variant": "#4f574b", "muted": "#687063",
+    "line": "#e6e2d8", "outline-variant": "#c2c8be", "error": "#ba1a1a", "offer": "#d92d20"
+  },
+  fontFamily: { sans: ["Cairo", "sans-serif"] }
+} } };
 </script>
-<link href="assets/site.css?v=20261123105133" rel="stylesheet"/>
+<link href="assets/site.css?v=20261123121202" rel="stylesheet"/>
+
 </head>
-<body class="bg-surface text-on-surface antialiased selection:bg-secondary/20 selection:text-secondary">
+<body class="bg-surface font-sans text-on-surface antialiased">
+<a class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:right-2 focus:z-[90] bg-white text-primary font-bold px-4 py-2 rounded-xl" href="#main">انتقل إلى المحتوى</a>
 <header class="sticky top-0 z-50 bg-surface/95 backdrop-blur-md border-b border-line" id="site-header">
 <div class="max-w-6xl mx-auto px-2 sm:px-6 h-14 md:h-16 flex items-center gap-1 md:gap-4">
 <a aria-label="صيدلية زين - الرئيسية" class="flex items-center gap-2 shrink-0 ps-1" href="index.html">
-<!-- logo mark cropped from the Instagram mockup; swap for the original flat file when available -->
 <img alt="" class="w-10 h-10 md:w-11 md:h-11 object-contain" height="44" src="assets/img/logo-mark-96.png" width="44"/>
 <span class="leading-none"><span class="block font-extrabold text-primary text-[17px] md:text-lg">صيدلية زين</span><span class="block text-[10px] md:text-[11px] font-bold tracking-[0.16em] text-muted mt-1" dir="ltr">ZAIN PHARMACY</span></span>
 </a>
@@ -101,334 +62,93 @@ tailwind.config = {
 <span class="material-symbols-outlined">shopping_cart</span>
 <span class="absolute top-1 left-1 min-w-[18px] h-[18px] px-1 rounded-full bg-cta text-white text-[10px] font-bold grid place-items-center hidden" data-cart-count="">0</span>
 </button>
-<a class="hidden md:inline-flex items-center gap-2 bg-cta hover:bg-cta-hover text-white font-bold text-sm rounded-full h-11 px-5 shadow-sm ms-2" href="https://wa.me/970599123456?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%B5%D9%8A%D8%AF%D9%84%D9%8A%D8%A9%20%D8%B2%D9%8A%D9%86" rel="noopener" target="_blank">
+<a class="hidden md:inline-flex items-center gap-2 bg-cta hover:bg-cta-hover text-white font-bold text-sm rounded-full h-11 px-5 shadow-sm ms-2" href="https://wa.me/970599123456?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%20%D8%B5%D9%8A%D8%AF%D9%84%D9%8A%D8%A9%20%D8%B2%D9%8A%D9%86" rel="noopener" target="_blank">
 <span class="material-symbols-outlined text-xl">chat</span>اطلب عبر واتساب</a>
 </div>
 </div>
 </header>
-
-<!-- Top Announcement & Header -->
-
-<main class="w-full pt-6 pb-20 bg-surface">
-<!-- Minimal Hero Header -->
-<section class="max-w-4xl mx-auto px-4 text-center pt-8 pb-6">
-<div class="inline-flex items-center gap-2 bg-primary/10 text-primary px-3.5 py-1.5 rounded-full text-xs font-bold mb-3">
-<span class="material-symbols-outlined text-sm text-secondary">verified</span>
-        صرف آمن وسريع بإشراف صيدلي معتمد
-      </div>
-<h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-primary tracking-tight leading-tight mb-3">
-        أرسل وصفتك الطبية في ثوانٍ
-      </h1>
-<p class="text-base sm:text-lg text-on-surface-variant max-w-xl mx-auto">
-        ارفع صورة الروشتة وسيتولى الصيدلي المناوب تجهيز أدويتك للتوصيل أو الاستلام الفوري.
-      </p>
-<!-- 3 Clear Visual Steps -->
-<div class="grid grid-cols-3 gap-3 sm:gap-6 mt-8 max-w-2xl mx-auto">
-<div class="flex flex-col items-center p-3 rounded-2xl bg-surface-container-low border border-outline-variant/30">
-<div class="w-9 h-9 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-sm mb-1.5">
-            ١
-          </div>
-<span class="text-xs sm:text-sm font-bold text-primary">ارفع الروشتة</span>
-</div>
-<div class="flex flex-col items-center p-3 rounded-2xl bg-surface-container-low border border-outline-variant/30">
-<div class="w-9 h-9 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-sm mb-1.5">
-            ٢
-          </div>
-<span class="text-xs sm:text-sm font-bold text-primary">حدد موقعك</span>
-</div>
-<div class="flex flex-col items-center p-3 rounded-2xl bg-surface-container-low border border-outline-variant/30">
-<div class="w-9 h-9 rounded-full bg-secondary/15 text-secondary flex items-center justify-center font-bold text-sm mb-1.5">
-            ٣
-          </div>
-<span class="text-xs sm:text-sm font-bold text-primary">استلم دواءك</span>
-</div>
-</div>
-</section>
-<!-- Main Workspace (Upload Form + Compact Sidebar) -->
-<section class="max-w-6xl mx-auto px-4 py-4">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-<!-- Primary Action Card (8 Cols) -->
-<div class="lg:col-span-8 bg-surface-container-lowest rounded-3xl p-6 sm:p-8 border border-outline-variant/30 shadow-sm">
-<form class="space-y-6" id="prescriptionForm" onsubmit="event.preventDefault(); handleSubmitPrescription();">
-<!-- Focused Dropzone -->
+<main class="w-full pt-4 md:pt-8" id="main">
+<section class="max-w-3xl mx-auto px-3 sm:px-6">
+<span class="inline-flex items-center gap-1.5 text-xs font-bold text-primary bg-primary-soft px-3 py-1 rounded-full"><span class="material-symbols-outlined text-[16px]">verified_user</span>بإشراف صيدلي مرخّص</span>
+<h1 class="text-2xl md:text-4xl font-extrabold text-primary mt-3">أرسل روشتتك في ثوانٍ</h1>
+<p class="text-sm md:text-base text-on-surface-variant mt-1.5">املأ البيانات، وبنفتحلك واتساب برسالة جاهزة، وبتبعت صورة الروشتة بنفس المحادثة.</p>
+<ol class="grid grid-cols-3 gap-2 mt-4"><li class="flex flex-col items-center text-center gap-1.5 bg-white border border-line rounded-2xl p-3"><span class="w-10 h-10 rounded-full bg-primary-soft text-primary grid place-items-center font-extrabold">1</span><span class="text-[13px] md:text-sm font-bold text-on-surface leading-tight">صوّر الروشتة</span></li><li class="flex flex-col items-center text-center gap-1.5 bg-white border border-line rounded-2xl p-3"><span class="w-10 h-10 rounded-full bg-primary-soft text-primary grid place-items-center font-extrabold">2</span><span class="text-[13px] md:text-sm font-bold text-on-surface leading-tight">اختر الفرع أو التوصيل</span></li><li class="flex flex-col items-center text-center gap-1.5 bg-white border border-line rounded-2xl p-3"><span class="w-10 h-10 rounded-full bg-primary-soft text-primary grid place-items-center font-extrabold">3</span><span class="text-[13px] md:text-sm font-bold text-on-surface leading-tight">استلم دواءك</span></li></ol>
+<form class="bg-white border border-line rounded-3xl p-4 md:p-6 mt-4 space-y-4" id="prescriptionForm" novalidate="">
 <div>
-<label class="block text-sm font-bold text-primary mb-2">صورة الروشتة أو قائمة الأدوية *</label>
-<div class="relative group border-2 border-dashed border-outline-variant hover:border-secondary bg-surface-container-low/50 hover:bg-surface-container-low rounded-2xl p-6 text-center cursor-pointer transition-colors" id="dropZone">
-<input accept="image/*,.pdf" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer" id="prescriptionFile" onchange="handleFileSelect(this)" required="" type="file"/>
-<div class="space-y-2" id="uploadDefaultView">
-<div class="w-12 h-12 rounded-full bg-primary/10 text-primary mx-auto flex items-center justify-center">
-<span class="material-symbols-outlined text-2xl text-secondary">add_photo_alternate</span>
-</div>
-<div>
-<span class="text-sm font-bold text-primary block">اضغط هنا لرفع الصورة أو اسحب الملف</span>
-<span class="text-xs text-on-surface-variant block mt-0.5">يدعم الصور وملفات PDF</span>
-</div>
-</div>
-<div class="hidden space-y-2" id="uploadPreviewView">
-<div class="inline-flex items-center gap-3 bg-surface-container-lowest px-4 py-2 rounded-xl border border-outline-variant/40">
-<span class="material-symbols-outlined text-secondary">task_alt</span>
-<span class="text-xs font-bold text-primary truncate max-w-xs" id="fileNameDisplay">prescription.jpg</span>
-<button class="text-outline hover:text-error mr-2" onclick="clearSelectedFile(event)" title="إلغاء الملف" type="button">
-<span class="material-symbols-outlined text-base">close</span>
-</button>
-</div>
-</div>
-</div>
-</div>
-<!-- Essential Inputs: Name & Phone -->
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-<div>
-<label class="block text-xs font-bold text-primary mb-1.5" for="patientName">الاسم الكامل *</label>
-<input class="w-full bg-surface-container-low border border-outline-variant/40 text-on-surface text-sm rounded-xl py-2.5 px-3.5 focus:outline-none focus:border-primary focus:bg-surface-container-lowest transition-colors" id="patientName" placeholder="أدخل اسم المريض" required="" type="text"/>
-</div>
-<div>
-<label class="block text-xs font-bold text-primary mb-1.5" for="patientPhone">رقم الواتساب / الهاتف *</label>
-<input class="w-full bg-surface-container-low border border-outline-variant/40 text-on-surface text-sm rounded-xl py-2.5 px-3.5 focus:outline-none focus:border-primary focus:bg-surface-container-lowest text-right transition-colors" dir="ltr" id="patientPhone" placeholder="059xxxxxxx" required="" type="tel"/>
-</div>
-</div>
-<!-- Delivery Choice -->
-<div>
-<label class="block text-xs font-bold text-primary mb-2">طريقة الاستلام *</label>
-<div class="grid grid-cols-2 gap-3">
-<label class="flex items-center gap-2.5 p-3 rounded-xl bg-surface-container-low border border-outline-variant/40 cursor-pointer hover:bg-surface-container transition-colors">
-<input checked="" class="w-4 h-4 text-primary accent-primary" name="fulfillment" onchange="toggleFulfillment(this.value)" type="radio" value="branch"/>
-<div>
-<span class="text-xs font-bold text-primary block">استلام من الفرع</span>
-<span class="text-[11px] text-on-surface-variant block">مباشر ومجاناً</span>
-</div>
-</label>
-<label class="flex items-center gap-2.5 p-3 rounded-xl bg-surface-container-low border border-outline-variant/40 cursor-pointer hover:bg-surface-container transition-colors">
-<input class="w-4 h-4 text-primary accent-primary" name="fulfillment" onchange="toggleFulfillment(this.value)" type="radio" value="delivery"/>
-<div>
-<span class="text-xs font-bold text-primary block">توصيل للعنوان</span>
-<span class="text-[11px] text-on-surface-variant block">سريع لكافة أحياء غزة</span>
-</div>
+<span class="block text-sm font-bold text-primary mb-2">صورة الروشتة</span>
+<label class="relative flex flex-col items-center justify-center gap-1 border-2 border-dashed border-outline-variant rounded-2xl p-5 text-center cursor-pointer hover:border-primary/50 hover:bg-surface-low" for="prescriptionFile">
+<span class="material-symbols-outlined text-primary text-[32px]">add_photo_alternate</span>
+<span class="font-bold text-sm" id="fileNameDisplay">اضغط لتصوير الروشتة أو اختيار صورة</span>
+<span class="text-xs text-muted">صورة أو PDF · الصورة بتبعتها إنت على واتساب</span>
+<input accept="image/*,.pdf" class="sr-only" id="prescriptionFile" type="file"/>
 </label>
 </div>
-<!-- Branch Select -->
-<div class="mt-3" id="branchSelectorBox">
-<select class="w-full bg-surface-container-low border border-outline-variant/40 text-on-surface text-xs font-medium rounded-xl py-2.5 px-3 focus:outline-none focus:border-primary focus:bg-surface-container-lowest" id="branchSelect">
-<option value="remal">فرع الرمال - شارع الوحدة</option>
-<option value="tal_hawa">فرع تل الهوا - شارع الأبراج</option>
-<option value="nasr">فرع النصر - مفترق اللبابيدي</option>
-<option value="deir_balah">فرع الوسطى - دير البلح</option>
-</select>
+<div class="grid gap-4 sm:grid-cols-2">
+<label class="block"><span class="block text-sm font-bold text-primary mb-1.5">الاسم الكامل</span><input autocomplete="name" class="w-full h-12 rounded-xl bg-surface-low border border-line px-3.5 text-[15px] focus:border-primary focus:ring-2 focus:ring-primary/15" id="patientName" placeholder="اسم المريض" required="" type="text"/></label>
+<label class="block"><span class="block text-sm font-bold text-primary mb-1.5">رقم الجوال / واتساب</span><input autocomplete="tel" class="w-full h-12 rounded-xl bg-surface-low border border-line px-3.5 text-[15px] focus:border-primary focus:ring-2 focus:ring-primary/15 text-right" dir="ltr" id="patientPhone" inputmode="tel" placeholder="059xxxxxxx" required="" type="tel"/></label>
 </div>
-<!-- Address Input (Conditional) -->
-<div class="mt-3 hidden" id="addressInputBox">
-<input class="w-full bg-surface-container-low border border-outline-variant/40 text-on-surface text-xs rounded-xl py-2.5 px-3 focus:outline-none focus:border-primary focus:bg-surface-container-lowest" id="deliveryAddress" placeholder="المنطقة والشارع وأقرب معلم بارز" type="text"/>
+<fieldset>
+<legend class="block text-sm font-bold text-primary mb-2">طريقة الاستلام</legend>
+<div class="grid grid-cols-2 gap-2">
+<label class="flex items-center gap-2.5 p-3 rounded-xl border border-line bg-surface-low cursor-pointer has-[:checked]:border-primary has-[:checked]:bg-primary-soft"><input checked="" class="text-primary focus:ring-primary" name="fulfillment" type="radio" value="branch"/><span class="font-bold text-sm">استلام من الفرع</span></label>
+<label class="flex items-center gap-2.5 p-3 rounded-xl border border-line bg-surface-low cursor-pointer has-[:checked]:border-primary has-[:checked]:bg-primary-soft"><input class="text-primary focus:ring-primary" name="fulfillment" type="radio" value="delivery"/><span class="font-bold text-sm">توصيل للبيت</span></label>
 </div>
-</div>
-<!-- Optional Note -->
-<div>
-<label class="block text-xs font-bold text-primary mb-1.5" for="notes">ملاحظات إضافية (اختياري)</label>
-<input class="w-full bg-surface-container-low border border-outline-variant/40 text-on-surface text-xs rounded-xl py-2.5 px-3.5 focus:outline-none focus:border-primary focus:bg-surface-container-lowest" id="notes" placeholder="حساسية دوائية، بدائل مفضلة، أو استفسار محدد" type="text"/>
-</div>
-<!-- Submit Button -->
-<button class="w-full bg-secondary hover:bg-secondary/90 text-on-secondary font-bold text-base py-3 px-6 rounded-xl transition-all shadow-md flex items-center justify-center gap-2" type="submit">
-<span class="material-symbols-outlined text-xl">send</span>
-<span>إرسال الروشتة للصيدلي</span>
-</button>
+</fieldset>
+<label class="block" id="branchSelectorBox"><span class="block text-sm font-bold text-primary mb-1.5">الفرع</span><select class="w-full h-12 rounded-xl bg-surface-low border border-line px-3.5 text-[15px] focus:border-primary focus:ring-2 focus:ring-primary/15" id="branchSelect"><option value="remal">فرع الرمال - شارع عمر المختار</option><option value="tel-al-hawa">فرع تل الهوا - شارع الأبراج</option><option value="al-nasr">فرع النصر - مفترق اللبابيدي</option><option value="deir-al-balah">فرع دير البلح - شارع صلاح الدين</option></select></label>
+<label class="block hidden" id="addressInputBox"><span class="block text-sm font-bold text-primary mb-1.5">عنوان التوصيل</span><input autocomplete="street-address" class="w-full h-12 rounded-xl bg-surface-low border border-line px-3.5 text-[15px] focus:border-primary focus:ring-2 focus:ring-primary/15" id="deliveryAddress" placeholder="المنطقة، الشارع، أقرب معلم" type="text"/></label>
+<label class="block"><span class="block text-sm font-bold text-primary mb-1.5">ملاحظات <span class="text-muted font-normal">(اختياري)</span></span><input class="w-full h-12 rounded-xl bg-surface-low border border-line px-3.5 text-[15px] focus:border-primary focus:ring-2 focus:ring-primary/15" id="notes" placeholder="حساسية من دواء، بديل مفضل..." type="text"/></label>
+<p class="hidden text-sm font-bold text-error" id="formError" role="alert"></p>
+<button class="w-full h-12 rounded-full bg-cta hover:bg-cta-hover text-white font-bold text-base flex items-center justify-center gap-2 shadow-sm" type="submit"><span class="material-symbols-outlined">send</span>أرسل الروشتة عبر واتساب</button>
+<p class="text-xs text-muted text-center">ما بنحفظ صورتك ولا بياناتك على أي سيرفر: الرسالة بتنفتح عندك وإنت اللي بتبعتها. <a class="underline hover:text-primary" href="privacy.html">سياسة الخصوصية</a></p>
+<div class="hidden bg-primary-soft border border-primary/20 rounded-2xl p-4" id="submissionSuccessBanner" role="status"></div>
 </form>
-<!-- Success Toast Message -->
-<div class="hidden mt-4 p-4 bg-primary text-on-primary rounded-2xl flex items-center gap-3 text-sm" id="submissionSuccessBanner">
-<span class="material-symbols-outlined text-secondary text-2xl">check_circle</span>
-<div>
-<p class="font-bold">تم استلام وصفتك بنجاح!</p>
-<p class="text-xs opacity-90">سيتواصل معك الصيدلي المناوب عبر واتساب خلال دقائق لتأكيد الطلب.</p>
-</div>
-</div>
-</div>
-<!-- Compact Fast-Track Sidebar (4 Cols) -->
-<div class="lg:col-span-4 space-y-4">
-<!-- WhatsApp Quick Route -->
-<div class="bg-primary text-on-primary rounded-3xl p-5 shadow-sm">
-<div class="flex items-center gap-2 text-secondary text-xs font-bold mb-2">
-<span class="material-symbols-outlined text-base">bolt</span>
-              طلب فوري بدون نموذج
-            </div>
-<h3 class="text-base font-bold text-surface-container-lowest mb-1">راسل الصيدلي عبر واتساب</h3>
-<p class="text-xs text-primary-fixed opacity-90 mb-4 leading-relaxed">
-              صوّر الروشتة وأرسلها فوراً على رقم الصيدلية المناوب لمراجعتها فوراً.
-            </p>
-<a class="w-full bg-secondary hover:bg-secondary/90 text-on-secondary font-bold text-xs py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 transition-colors" href="https://wa.me/970599123456" target="_blank">
-<span class="material-symbols-outlined text-base">chat</span>
-<span>فتح المحادثة (0599123456)</span>
+<a class="mt-4 flex items-center gap-3 bg-primary text-white rounded-2xl p-4" href="https://wa.me/970599123456?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%20%D8%B5%D9%8A%D8%AF%D9%84%D9%8A%D8%A9%20%D8%B2%D9%8A%D9%86%D8%8C%20%D8%A8%D8%AF%D9%8A%20%D8%A3%D8%A8%D8%B9%D8%AA%20%D8%B1%D9%88%D8%B4%D8%AA%D8%A9" rel="noopener" target="_blank">
+<span class="w-11 h-11 rounded-full bg-white/15 grid place-items-center shrink-0"><span class="material-symbols-outlined">bolt</span></span>
+<span class="flex-1"><span class="block font-extrabold">بدك أسرع؟</span><span class="block text-[13px] text-white/80">ابعت صورة الروشتة مباشرة على واتساب بدون تعبئة</span></span>
+<span class="material-symbols-outlined">chevron_left</span>
 </a>
-</div>
-<!-- Active Branches (Clean List) -->
-<div class="bg-surface-container-lowest rounded-3xl p-5 border border-outline-variant/30 space-y-3">
-<div class="flex items-center justify-between pb-1 border-b border-outline-variant/20">
-<span class="text-xs font-bold text-primary">فروعنا الجاهزة للاستلام</span>
-<span class="text-[11px] text-secondary font-bold flex items-center gap-1">
-<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> 4 فروع متاحة
-              </span>
-</div>
-<div class="text-xs space-y-2 text-on-surface-variant">
-<div class="flex justify-between items-center py-1">
-<span class="font-bold text-primary">الرمال:</span>
-<span>شارع الوحدة (مقابل العيادة)</span>
-</div>
-<div class="flex justify-between items-center py-1">
-<span class="font-bold text-primary">تل الهوا:</span>
-<span>شارع الأبراج (قرب القدس)</span>
-</div>
-<div class="flex justify-between items-center py-1">
-<span class="font-bold text-primary">النصر:</span>
-<span>مفترق اللبابيدي</span>
-</div>
-<div class="flex justify-between items-center py-1">
-<span class="font-bold text-primary">دير البلح:</span>
-<span>شارع صلاح الدين</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- On-Duty Pharmacists (Concise & Minimal Cards) -->
-<section class="max-w-6xl mx-auto px-4 pt-10 pb-6">
-<div class="flex items-center justify-between mb-4">
-<div>
-<h2 class="text-xl font-bold text-primary">الصيادلة المناوبون للاستشارة</h2>
-<p class="text-xs text-on-surface-variant mt-0.5">استشارة دوائية مباشرة ومجانية مع فريقنا المرخص</p>
-</div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-<!-- Pharmacist 1 -->
-<div class="bg-surface-container-lowest rounded-2xl p-4 border border-outline-variant/30 flex items-center gap-3.5">
-<img class="w-14 h-14 rounded-xl object-cover" data-alt="Headshot of Palestinian female pharmacist" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOR2VT2jvUi2b5_8KgTHxfNGmsBHLqW-lvX_LTcY5P412eSB203fPAdIZuaLRrn41N1v0z7OmtoNJ5zJp8wlHIonPHMtokD8WbLSmhdZ_AqhH2CqeVap0pyx3t0OtnjPA3r08hWAu1ydj29-FqTbYZb5Q0aHrOFGhtCIcMt2Qn6JGjFJ8UDBZCM2ONpZq3vjiZNE1pkZm8tc2yBCkRffx8H_tzI8K07ol94g0S4G8"/>
-<div class="flex-1 min-w-0">
-<h3 class="text-sm font-bold text-primary truncate">د. منى شراب</h3>
-<p class="text-[11px] text-on-surface-variant truncate">أمراض مزمنة وتداخلات دوائية</p>
-<a class="mt-2 inline-flex items-center gap-1 text-[11px] font-bold text-secondary hover:underline" href="https://wa.me/970599123456?text=استشارة%20د.%20منى" target="_blank">
-<span class="material-symbols-outlined text-xs">chat</span> استشارة عبر واتساب
-            </a>
-</div>
-</div>
-<!-- Pharmacist 2 -->
-<div class="bg-surface-container-lowest rounded-2xl p-4 border border-outline-variant/30 flex items-center gap-3.5">
-<img class="w-14 h-14 rounded-xl object-cover" data-alt="Headshot of male pharmacist" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAL79ZHxoRNl78Bh2KGiONdLQnKIaDTtzxM6IIuzpXx8bqKDJH6A4XN7aP8IXxJTmQAcB9nSaKuDrtBvXNh9SDufcGjrSYCq51h0sYA8aNH5DPrR5vfYeCE27XCHhGzuVr_oiIVTjoBsxyYEla9hIVDAT7MEp9PNN1s3N_m0D9GZWzR2RlGZs4aPjEh6KUAxKTU4x3aRzvpglJ4aQ4O87RUWSr5KV_ZFFiNBDYcH9U"/>
-<div class="flex-1 min-w-0">
-<h3 class="text-sm font-bold text-primary truncate">د. محمود رضوان</h3>
-<p class="text-[11px] text-on-surface-variant truncate">جرعات الرضع وصحة الطفل</p>
-<a class="mt-2 inline-flex items-center gap-1 text-[11px] font-bold text-secondary hover:underline" href="https://wa.me/970599123456?text=استشارة%20د.%20محمود" target="_blank">
-<span class="material-symbols-outlined text-xs">chat</span> استشارة عبر واتساب
-            </a>
-</div>
-</div>
-<!-- Pharmacist 3 -->
-<div class="bg-surface-container-lowest rounded-2xl p-4 border border-outline-variant/30 flex items-center gap-3.5">
-<img class="w-14 h-14 rounded-xl object-cover" data-alt="Headshot of female clinical pharmacist" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAp9T6Z92cSOCLgKI1JW7Zk_Xl93oLIX3MYcx6zu01lZaum1eIjxgQ6Ys2CdAab1lxvugnsfgAnYeaUsCI0PxHXokm-5gR6gt6QpzEbHR8eV2lINXIBzD40fkj-bHVj6qASdOy-YTms7aXu17akg8U3LI_nOu5oE5N6GUKIQ_-bq02XQgwlfrZyKEWpZc0eQEZIl660nNILo44TOsvazwUcF0K4yfvYTp_wOHITNTk"/>
-<div class="flex-1 min-w-0">
-<h3 class="text-sm font-bold text-primary truncate">د. سارة عيسى</h3>
-<p class="text-[11px] text-on-surface-variant truncate">العلاجات الجلدية والتركيبات</p>
-<a class="mt-2 inline-flex items-center gap-1 text-[11px] font-bold text-secondary hover:underline" href="https://wa.me/970599123456?text=استشارة%20د.%20سارة" target="_blank">
-<span class="material-symbols-outlined text-xs">chat</span> استشارة عبر واتساب
-            </a>
-</div>
-</div>
-</div>
-</section>
-<!-- Short, Concise Trust Note (Replacing Cluttered FAQ) -->
-<section class="max-w-6xl mx-auto px-4 mt-6">
-<div class="bg-surface-container-low rounded-2xl p-4 border border-outline-variant/30 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-on-surface-variant">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-secondary text-lg">health_and_safety</span>
-<span><strong>ملاحظة أمان:</strong> جميع الأدوية موثوقة ومحفوظة وفق معايير التبريد الطبي. يرجى إبراز الروشتة الأصلية عند الاستلام.</span>
-</div>
-<div class="flex items-center gap-2 font-medium text-primary shrink-0">
-<span class="material-symbols-outlined text-sm">verified_user</span>
-          مرخصة من وزارة الصحة الفلسطينية
-        </div>
-</div>
 </section>
 </main>
-<!-- Interactive Script -->
-<script>
-    function handleFileSelect(input) {
-      if (input.files && input.files[0]) {
-        document.getElementById('fileNameDisplay').textContent = input.files[0].name;
-        document.getElementById('uploadDefaultView').classList.add('hidden');
-        document.getElementById('uploadPreviewView').classList.remove('hidden');
-      }
-    }
-
-    function clearSelectedFile(event) {
-      event.stopPropagation();
-      const input = document.getElementById('prescriptionFile');
-      input.value = '';
-      document.getElementById('uploadPreviewView').classList.add('hidden');
-      document.getElementById('uploadDefaultView').classList.remove('hidden');
-    }
-
-    function toggleFulfillment(val) {
-      const addressBox = document.getElementById('addressInputBox');
-      const branchBox = document.getElementById('branchSelectorBox');
-      if (val === 'delivery') {
-        addressBox.classList.remove('hidden');
-        branchBox.classList.add('hidden');
-      } else {
-        addressBox.classList.add('hidden');
-        branchBox.classList.remove('hidden');
-      }
-    }
-
-    function handleSubmitPrescription() {
-      const banner = document.getElementById('submissionSuccessBanner');
-      banner.classList.remove('hidden');
-      banner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      document.getElementById('prescriptionForm').reset();
-      document.getElementById('uploadPreviewView').classList.add('hidden');
-      document.getElementById('uploadDefaultView').classList.remove('hidden');
-      document.getElementById('addressInputBox').classList.add('hidden');
-      document.getElementById('branchSelectorBox').classList.remove('hidden');
-    }
-  </script>
-<!-- Unified Footer -->
-<footer class="bg-white border-t border-line mt-16">
-<div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4 text-sm">
-<div class="space-y-3">
+<footer class="bg-white border-t border-line mt-12 md:mt-16">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 py-8 md:py-10 grid gap-6 md:gap-8 md:grid-cols-4 text-sm">
+<div class="space-y-3 md:col-span-1">
 <div class="flex items-center gap-2.5">
 <img alt="" class="w-10 h-10 object-contain" height="40" loading="lazy" src="assets/img/logo-mark-96.png" width="40"/>
-<span class="font-extrabold text-primary text-lg">صيدلية زين - غزة</span>
+<span class="leading-tight"><span class="block font-extrabold text-primary text-lg">صيدلية زين - غزة</span><span class="block text-xs text-muted">زين فارم · Zain Pharm</span></span>
 </div>
-<p class="text-on-surface-variant leading-relaxed">أدوية أصلية، صيادلة مرخّصون، وتوصيل من أقرب فرع من فروعنا الأربعة في قطاع غزة.</p>
+<p class="text-on-surface-variant leading-relaxed">أدوية أصلية، صيادلة مرخّصون، وتوصيل من أقرب فرع من فروعنا الأربعة في غزة.</p>
 <p class="inline-flex items-center gap-1.5 text-primary font-bold"><span class="material-symbols-outlined text-lg">verified_user</span>مرخّصة من وزارة الصحة الفلسطينية</p>
 </div>
-<div>
-<h3 class="font-extrabold text-primary mb-3">روابط سريعة</h3>
+<div class="hidden md:block">
+<h2 class="font-extrabold text-primary mb-3">روابط سريعة</h2>
 <ul class="space-y-2 text-on-surface-variant">
 <li><a class="hover:text-primary" href="products.html">الأدوية والمنتجات</a></li>
 <li><a class="hover:text-primary" href="prescription.html">اطلب روشتة</a></li>
 <li><a class="hover:text-primary" href="branches.html">فروعنا وساعات العمل</a></li>
+<li><a class="hover:text-primary" href="privacy.html">سياسة الخصوصية</a></li>
 </ul>
 </div>
-<div>
-<h3 class="font-extrabold text-primary mb-3">فروعنا</h3>
-<!-- TODO: confirm official branch names -->
-<ul class="space-y-2 text-on-surface-variant">
-<li><a class="hover:text-primary" href="branches.html">فرع الرمال (24 ساعة)</a></li>
-<li><a class="hover:text-primary" href="branches.html">فرع تل الهوا</a></li>
-<li><a class="hover:text-primary" href="branches.html">فرع النصر</a></li>
-<li><a class="hover:text-primary" href="branches.html">فرع دير البلح</a></li>
-</ul>
+<div class="hidden md:block">
+<h2 class="font-extrabold text-primary mb-3">فروعنا</h2>
+<ul class="space-y-2 text-on-surface-variant"><li><a class="hover:text-primary" href="branches.html#branch-remal">فرع الرمال</a></li><li><a class="hover:text-primary" href="branches.html#branch-tel-al-hawa">فرع تل الهوا</a></li><li><a class="hover:text-primary" href="branches.html#branch-al-nasr">فرع النصر</a></li><li><a class="hover:text-primary" href="branches.html#branch-deir-al-balah">فرع دير البلح</a></li></ul>
 </div>
 <div>
-<h3 class="font-extrabold text-primary mb-3">تواصل معنا</h3>
-<!-- TODO: confirm emergency and WhatsApp numbers -->
+<h2 class="font-extrabold text-primary mb-3">تواصل معنا</h2>
 <div class="space-y-2">
-<a class="flex items-center gap-2 text-on-surface hover:text-primary font-bold" dir="ltr" href="tel:+97082820000"><span class="material-symbols-outlined text-lg text-primary">call</span>+970 8 282 0000</a>
-<a class="flex items-center gap-2 text-cta hover:text-cta-hover font-bold" dir="ltr" href="https://wa.me/970599123456" rel="noopener" target="_blank"><span class="material-symbols-outlined text-lg">chat</span>+970 59 912 3456</a>
+<a class="flex items-center gap-2 text-on-surface hover:text-primary font-bold" href="tel:+97082820000"><span class="material-symbols-outlined text-lg text-primary">call</span><span dir="ltr">+970 8 282 0000</span></a>
+<a class="flex items-center gap-2 text-cta hover:text-cta-hover font-bold" href="https://wa.me/970599123456?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%20%D8%B5%D9%8A%D8%AF%D9%84%D9%8A%D8%A9%20%D8%B2%D9%8A%D9%86" rel="noopener" target="_blank"><span class="material-symbols-outlined text-lg">chat</span><span dir="ltr">+970 59 912 3456</span></a>
 <p class="text-muted text-xs">الدفع نقدًا عند الاستلام · جوال باي · بال باي</p>
 </div>
 </div>
 </div>
 <div class="border-t border-line">
-<div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 text-xs text-muted">© 2026 صيدلية زين - غزة. جميع الحقوق محفوظة.</div>
+<div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 text-xs text-muted flex flex-wrap gap-x-4 gap-y-1 justify-between">
+<span>© 2026 صيدلية زين - غزة. جميع الحقوق محفوظة.</span>
+<span class="flex gap-4"><a class="hover:text-primary" href="privacy.html">سياسة الخصوصية</a></span>
+</div>
 </div>
 </footer>
 <nav aria-label="تنقل سريع" class="md:hidden fixed bottom-0 inset-x-0 z-50 bg-white/95 backdrop-blur-md border-t border-line" style="padding-bottom: env(safe-area-inset-bottom)"><ul class="grid grid-cols-4"><li><a class="z-tab flex flex-col items-center gap-0.5 py-1.5 text-xs font-bold text-muted" href="index.html"><span class="z-tab__icon material-symbols-outlined text-[22px] px-4 py-0.5 rounded-full">home</span>الرئيسية</a></li><li><a class="z-tab flex flex-col items-center gap-0.5 py-1.5 text-xs font-bold text-muted" href="products.html"><span class="z-tab__icon material-symbols-outlined text-[22px] px-4 py-0.5 rounded-full">medication</span>المنتجات</a></li><li><a aria-current="page" class="z-tab flex flex-col items-center gap-0.5 py-1.5 text-xs font-bold text-primary" href="prescription.html"><span class="z-tab__icon material-symbols-outlined text-[22px] px-4 py-0.5 rounded-full">upload_file</span>اطلب روشتة</a></li><li><a class="z-tab flex flex-col items-center gap-0.5 py-1.5 text-xs font-bold text-muted" href="branches.html"><span class="z-tab__icon material-symbols-outlined text-[22px] px-4 py-0.5 rounded-full">location_on</span>الفروع</a></li></ul></nav>
-
-<script defer src="assets/site.js?v=20261123105133"></script>
-</body></html>
+<script defer src="assets/site.js?v=20261123121202"></script>
+</body>
+</html>

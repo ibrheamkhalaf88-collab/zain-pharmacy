@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ibrheamkhalaf88-collab.github.io/zain-pharmacy/sitemap.xml
