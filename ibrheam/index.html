@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>لوحة إدارة الفروع | صيدلية زين</title>
+<link rel="stylesheet" href="../omar/dashboard.css">
+<script defer src="../omar/data.js"></script>
+<script defer src="../omar/dashboard.js"></script>
+</head>
+<body data-dashboard="branches">
+<a class="skip" href="#main">انتقل إلى المحتوى</a>
+<aside>
+  <div class="brand"><span aria-hidden="true">✚</span><div><strong id="brand-name">صيدلية زين</strong><small>إدارة الفروع</small></div></div>
+  <nav aria-label="أقسام الإدارة" id="nav"></nav>
+  <a class="store" href="../omar/index.html">لوحة الإدارة الرئيسية ↗</a>
+</aside>
+<main id="main">
+  <header><div><p class="eyebrow">إدارة الفروع والمواعيد</p><h1 id="title">نظرة عامة</h1></div><span class="badge">معاينة محلية</span></header>
+  <p class="notice">التعديلات تُحفظ في هذا المتصفح. الطلبات تُسجَّل يدويًا، وبيانات الموقع العام تحتاج إلى ربط منفصل.</p>
+  <div id="content"></div>
+  <p id="status" role="status" aria-live="polite"></p>
+</main>
+<dialog id="editor"><form id="form"><h2 id="editor-title"></h2><div id="fields"></div><div class="actions"><button class="primary" type="submit">حفظ</button><button id="cancel" type="button">إلغاء</button></div></form></dialog>
+<button type="button" id="chat-launch" class="chat-launch" aria-controls="manager-chat" aria-expanded="false"><span aria-hidden="true">✦</span> محادثة المدير</button>
+<dialog id="manager-chat" class="manager-chat" aria-labelledby="chat-title">
+  <header><div><h2 id="chat-title">مساعد المدير</h2><p>Gemini · لوحة الفروع</p></div><button type="button" id="chat-close" aria-label="إغلاق المحادثة">×</button></header>
+  <details id="chat-settings"><summary>إعدادات Gemini</summary>
+    <label for="chat-model">نموذج Gemini</label>
+    <select id="chat-model">
+      <option value="">النموذج الافتراضي للخادم</option>
+      <option value="gemini-3.8-flash">Gemini 3.8 Flash</option>
+      <option value="gemini-3.6-flash">Gemini 3.6 Flash</option>
+      <option value="gemini-3.5-flash-lite">Gemini 3.5 Flash-Lite</option>
+    </select>
+    <label for="chat-key">مفتاح Gemini API</label>
+    <input id="chat-key" type="password" maxlength="200" autocomplete="off" spellcheck="false">
+    <small>المفتاح لهذا التبويب ويُمسح عند تحديث الصفحة. اترك الخانتين فارغتين لاستخدام إعدادات الخادم.</small>
+    <button type="button" id="chat-forget">مسح المفتاح</button>
+  </details>
+  <div id="chat-log" class="chat-log" role="log" aria-live="polite"><p class="chat-message chat-assistant">أهلًا! اسألني عن الطلبات أو المواعيد أو المخزون في الفروع.</p></div>
+  <form id="chat-form">
+    <label for="chat-question">سؤالك</label>
+    <textarea id="chat-question" rows="2" maxlength="350" required placeholder="مثلاً: أي فرع عنده أكثر مواعيد؟" aria-describedby="chat-note"></textarea>
+    <div class="chat-actions"><small id="chat-note">اكتب سؤالًا إداريًا وتجنّب الأسماء وأرقام الهواتف وبيانات المرضى.</small><button class="primary" type="submit">إرسال</button></div>
+  </form>
+</dialog>
+</body>
+</html>
+
