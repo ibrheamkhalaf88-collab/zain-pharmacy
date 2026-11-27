@@ -1,8 +1,7 @@
 /* Zain Pharmacy - shared behavior for every page */
 (function () {
-  // TODO: confirm the main WhatsApp number before going live
-  var WA = '970599123456';
-  var BRANCHES = ['توصيل للمنزل', 'فرع الرمال', 'فرع تل الهوا', 'فرع النصر', 'فرع دير البلح'];
+  // Use the same contact number as the storefront.
+  var WA = '970599682008';
   var KEY = 'zain-cart-v1';
 
   function openWhatsApp(text) {
@@ -43,20 +42,19 @@
   }
 
   function add(item) {
-    var found = cart.filter(function (i) { return i.name === item.name; })[0];
+    var found = cart.filter(function (i) { return i.name === item.name && i.price === item.price && Boolean(i.rx) === Boolean(item.rx); })[0];
     if (found) found.qty++; else { item.qty = 1; cart.push(item); }
     save();
     toast('أُضيف «' + item.name + '» إلى السلة');
-    document.querySelectorAll('[data-cart-count]').forEach(function (b) {
-      b.classList.remove('z-bump'); void b.offsetWidth; b.classList.add('z-bump');
-    });
+    floatingCart.classList.remove('z-cart-pulse');
+    void floatingCart.offsetWidth;
+    floatingCart.classList.add('z-cart-pulse');
   }
 
   // Stitch pages call quickOrder(name) inline; the delegated click below does the real work
   window.quickOrder = function () {};
 
   function buildCart() {
-    var opts = BRANCHES.map(function (b) { return '<option>' + b + '</option>'; }).join('');
     var el = document.createElement('div');
     el.id = 'z-cart'; el.className = 'fixed inset-0 z-[80] hidden'; el.setAttribute('aria-hidden', 'true');
     el.innerHTML =
@@ -68,20 +66,29 @@
         '</div>' +
         '<div class="flex-1 overflow-y-auto p-4 space-y-3" data-cart-list></div>' +
         '<div class="p-4 border-t border-line space-y-3 bg-white" data-cart-foot>' +
-          '<label class="block text-xs font-bold text-primary">طريقة الاستلام' +
-            '<select class="mt-1.5 w-full h-11 rounded-xl border-line bg-surface-low text-sm font-semibold" data-cart-branch>' + opts + '</select></label>' +
-          '<div class="flex items-center justify-between font-extrabold text-primary"><span>المجموع</span><span data-cart-total></span></div>' +
-          '<button class="w-full h-12 rounded-full bg-cta hover:bg-cta-hover text-white font-bold flex items-center justify-center gap-2" data-cart-send type="button"><span class="material-symbols-outlined">chat</span>إرسال الطلب عبر واتساب</button>' +
-          '<p class="text-[11px] text-muted text-center">الدفع عند الاستلام. الصيدلي يؤكد التوفر والسعر قبل التجهيز.</p>' +
+          '<p class="text-sm font-bold text-primary">طريقة الاستلام: توصيل للعنوان</p>' +
+          '<label for="z-cart-address" class="block text-sm font-bold text-primary">عنوان التوصيل (إجباري)</label>' +
+          '<textarea id="z-cart-address" class="w-full rounded-xl border-line bg-surface-low text-sm" rows="2" maxlength="240" required data-cart-address placeholder="المنطقة، الشارع، ورقم المبنى أو أقرب معلم"></textarea>' +
+          '<div class="flex items-center justify-between font-extrabold text-primary"><span>إجمالي المنتجات</span><span data-cart-total></span></div>' +
+          '<button class="w-full h-12 rounded-full bg-cta hover:bg-cta-hover text-white font-bold flex items-center justify-center gap-2" data-cart-send type="button"><span class="material-symbols-outlined">chat</span>مراجعة الطلب وفتح واتساب</button>' +
+          '<p class="text-[11px] text-muted text-center">راجع الأصناف والمبلغ قبل المتابعة. أرسل الرسالة من واتساب لإتمام الطلب.</p>' +
         '</div>' +
       '</aside>';
     document.body.appendChild(el);
     return el;
   }
   var cartEl = buildCart();
+  var floatingCart = document.createElement('button');
+  floatingCart.type = 'button';
+  floatingCart.className = 'z-cart-float';
+  floatingCart.setAttribute('data-cart-open','');
+  floatingCart.setAttribute('aria-controls','z-cart');
+  floatingCart.innerHTML = '<span aria-hidden="true" class="material-symbols-outlined">shopping_cart</span><span>السلة</span><span class="z-cart-badge" data-cart-count></span>';
+  document.body.appendChild(floatingCart);
 
   function render() {
     var n = count();
+    floatingCart.setAttribute('aria-label','سلة الطلب، عدد القطع: ' + n);
     document.querySelectorAll('[data-cart-count]').forEach(function (b) { b.textContent = n; b.classList.toggle('hidden', n === 0); });
     document.querySelectorAll('[data-cart-count-inline]').forEach(function (b) { b.textContent = '(' + n + ')'; });
     var list = cartEl.querySelector('[data-cart-list]');
@@ -139,14 +146,23 @@
     if ((b = t.closest('[data-dec]'))) { var i = +b.getAttribute('data-dec'); if (--cart[i].qty < 1) cart.splice(i, 1); save(); return; }
     if ((b = t.closest('[data-remove]'))) { cart.splice(+b.getAttribute('data-remove'), 1); save(); return; }
     if (t.closest('[data-cart-send]')) {
-      var where = cartEl.querySelector('[data-cart-branch]').value;
+      if (!cart.length) return;
+      var addressField = cartEl.querySelector('[data-cart-address]');
+      var address = addressField.value.trim();
+      addressField.setCustomValidity(address ? '' : 'أدخل عنوان التوصيل أولًا.');
+      if (!addressField.reportValidity()) return;
       var lines = ['مرحبًا صيدلية زين، أريد طلب:'];
-      cart.forEach(function (i) { lines.push('• ' + i.name + ' × ' + i.qty + ' = ' + money(i.price * i.qty) + ' ₪'); });
-      lines.push('المجموع: ' + money(total()) + ' ₪');
-      lines.push(where === BRANCHES[0] ? 'التوصيل للمنزل (سأرسل العنوان)' : 'الاستلام من: ' + where);
+      cart.forEach(function (i) { lines.push('• ' + i.name + ' × ' + i.qty + ' × ' + money(i.price) + ' ₪ = ' + money(i.price * i.qty) + ' ₪'); });
+      lines.push('إجمالي المنتجات: ' + money(total()) + ' ₪');
+      lines.push('طريقة الاستلام: توصيل للعنوان');
+      lines.push('عنوان التوصيل: ' + address.replace(/\s+/g,' '));
       if (cart.some(function (i) { return i.rx; })) lines.push('بعض الأصناف تحتاج روشتة، سأرسل صورتها هنا.');
+      lines.push('يرجى تأكيد التوفر والمبلغ النهائي وأي رسوم توصيل.');
       openWhatsApp(lines.join('\n'));
     }
+  });
+  cartEl.addEventListener('input', function (event) {
+    if (event.target.matches('[data-cart-address]')) event.target.setCustomValidity('');
   });
   document.addEventListener('keydown', function (e) {
     if (e.key !== 'Escape') return;
@@ -318,3 +334,5 @@
     });
   }
 })();
+
+
