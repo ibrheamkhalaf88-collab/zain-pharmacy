@@ -195,16 +195,24 @@
       return String(t).toLowerCase().replace(/[ً-ْ]/g, '').replace(/[أإآ]/g, 'ا').replace(/ة/g, 'ه').replace(/ى/g, 'ي').trim();
     };
     var params = new URLSearchParams(location.search);
-    var state = { cat: params.get('cat') || 'all', q: params.get('q') || '' };
-    pSearch.value = state.q;
     var cards = Array.prototype.slice.call(pGrid.querySelectorAll('.product-item'));
     var chips = Array.prototype.slice.call(document.querySelectorAll('.z-chip'));
+    var requestedCategory = params.get('cat');
+    var state = {
+      cat: chips.some(function (chip) { return chip.getAttribute('data-cat') === requestedCategory; }) ? requestedCategory : 'all',
+      q: params.get('q') || ''
+    };
+    pSearch.value = state.q;
+    var searchIndex = cards.map(function (card) {
+      return { element: card, category: card.getAttribute('data-category'), text: norm(card.textContent) };
+    });
     var countEl = document.getElementById('z-count'), emptyEl = document.getElementById('z-empty');
     var applyFilter = function () {
-      var q = norm(state.q), shown = 0;
-      cards.forEach(function (c) {
-        var ok = (state.cat === 'all' || c.getAttribute('data-category') === state.cat) && (!q || norm(c.textContent).indexOf(q) !== -1);
-        c.classList.toggle('hidden', !ok); if (ok) shown++;
+      var words = norm(state.q).split(/\s+/).filter(Boolean), shown = 0;
+      searchIndex.forEach(function (entry) {
+        var ok = (state.cat === 'all' || entry.category === state.cat) &&
+          words.every(function (word) { return entry.text.indexOf(word) !== -1; });
+        entry.element.classList.toggle('hidden', !ok); if (ok) shown++;
       });
       chips.forEach(function (ch) {
         var on = ch.getAttribute('data-cat') === state.cat;

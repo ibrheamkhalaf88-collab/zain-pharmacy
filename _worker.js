@@ -132,13 +132,17 @@ export async function onRequestPost({ request, env }) {
 }
 
 export default {
-  fetch(request, env) {
+  async fetch(request, env) {
     const path = new URL(request.url).pathname;
     if (/^\/(?:ibrheam|omar)\/api\/assistant\/?$/.test(path)) {
       return request.method === 'POST'
         ? onRequestPost({ request, env })
         : new Response(null, { status: 405, headers: { Allow: 'POST' } });
     }
-    return env.ASSETS.fetch(request);
+    const asset = await env.ASSETS.fetch(request);
+    const response = new Response(asset.body, asset);
+    response.headers.set('X-Content-Type-Options', 'nosniff');
+    response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
+    return response;
   }
 };
